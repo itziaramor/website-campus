@@ -1,0 +1,40 @@
+// -----------------------------------------------------------------------------
+// TRAINING TEACHERS
+// -----------------------------------------------------------------------------
+
+.training-teachers {
+  @include asparagus(440px);
+  position: relative;
+
+  .solidary + & {
+    margin-top: 85px;
+  }
+
+  .site-heading--h3 {
+    @include underline-heading($green-200, 0);
+  }
+
+  .slider {
+    @include rem(margin-top, 50px);
+  }
+
+
+  // @media Tablet to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(md) {
+    &__inner {
+      max-width: span(6);
+    }
+  }
+
+
+  // @media Desktop to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(lg) {
+    &__inner {
+      max-width: span(4);
+      padding-left: span(.5);
+    }
+  }
+
+}

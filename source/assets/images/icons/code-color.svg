@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="37px" height="37px" viewBox="0 0 37 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Componentes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Iconos-horario" transform="translate(-277.000000, -144.000000)" fill-rule="nonzero">
+            <g id="Group-3" transform="translate(277.000000, 144.000000)">
+                <path d="M34.58,9.51219512 C35.58646,9.51219512 36.4,8.65990244 36.4,7.6097561 L36.4,1.90243902 C36.4,0.852292683 35.58646,0 34.58,0 L1.82,0 C0.81354,0 0,0.852292683 0,1.90243902 L0,7.6097561 C0,8.65990244 0.81354,9.51219512 1.82,9.51219512 L1.82,28.5365854 L0,28.5365854 L0,32.3414634 L16.38,32.3414634 L16.38,36.1463415 L20.02,36.1463415 L20.02,32.3414634 L36.4,32.3414634 L36.4,28.5365854 L34.58,28.5365854 L34.58,9.51219512 Z M3.64,3.80487805 L32.76,3.80487805 L32.76,5.70731707 L3.64,5.70731707 L3.64,3.80487805 Z M30.94,28.5365854 L5.46,28.5365854 L5.46,9.51219512 L30.94,9.51219512 L30.94,28.5365854 Z" id="Shape" fill="#8D8D8D"></path>
+                <polygon id="Shape" fill="#9AD4C8" points="17.66674 23.3866829 13.49348 19.0243902 17.66674 14.6620976 15.09326 11.9720488 8.34652 19.0243902 15.09326 26.0767317"></polygon>
+                <polygon id="Shape" fill="#8BC881" points="21.30674 26.0767317 28.05348 19.0243902 21.30674 11.9720488 18.73326 14.6620976 22.90652 19.0243902 18.73326 23.3866829"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

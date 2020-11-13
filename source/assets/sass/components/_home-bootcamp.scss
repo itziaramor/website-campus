@@ -1,0 +1,292 @@
+// -----------------------------------------------------------------------------
+// HOME: BOOTCAMP
+// -----------------------------------------------------------------------------
+
+.home-bootcamp {
+  position: relative;
+  overflow: hidden;
+
+  &__circle {
+    width: 55px;
+    height: 56px;
+    margin: 0 auto 30px;
+    background: url('../images/icons/circle-colors.png') no-repeat;
+    background-size: cover;
+  }
+
+  &__intro {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    .home-bootcamp__heading {
+      @include rem(margin-bottom, 13px);
+      color: $purple-200;
+    }
+    .col {
+      &:first-of-type {
+        @include rem(margin-bottom, 32px);
+        .home-bootcamp__heading {
+          color: $green-200;
+        }
+      }
+    }
+  }
+
+  &__info {
+    position: relative;
+    padding-top: 100px;
+    background: $blue-300 url('../images/bg-bootcamp-sm.jpg') center top no-repeat;
+    background-size: cover;
+    text-align: center;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      left: 0;
+      z-index: 5;
+    }
+    &::before {
+      top: -8px;
+      height: 75px;
+      background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjU0NHB4IiBoZWlnaHQ9IjMxMnB4IiB2aWV3Qm94PSIwIDAgMjU0NCAzMTIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUwLjIgKDU1MDQ3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5QYXRoLTM8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iYm9vdGNhbXAtdG9wIiBmaWxsPSIjRkZGRkZGIiBmaWxsLXJ1bGU9Im5vbnplcm8iPgogICAgICAgICAgICA8cG9seWdvbiBpZD0iUGF0aC0zIiBwb2ludHM9IjAgOC4wODU5NCAwIDAgMjU0NCAwIDI1NDQgOCAxMjczIDMxMS41Ij48L3BvbHlnb24+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=') center bottom no-repeat;
+    }
+    &::after {
+      bottom: -540px;
+      height: 610px;
+      background-color: $white;
+      transform: skewY(11deg);
+      outline: 42px solid rgba($white, .4);
+    }
+    .col:first-of-type,
+    .home-bootcamp__heading {
+      color: $white;
+    }
+    &__inner {
+      position: relative;
+      z-index: 10;
+      padding-bottom: 180px;
+      .data-sheet__metainfo {
+        @include rem(max-width, 344px);
+        margin-right: auto;
+        margin-left: auto;
+        li {
+          flex: 0 0 26%;
+          max-width: none;
+        }
+      }
+    }
+    .home-bootcamp__heading {
+      @include rem(margin-bottom, 20px);
+      font-size: $h1-font-size;
+      &--sm {
+        @include rem(margin-bottom, 65px);
+        color: $green-100;
+        font-weight: 300;
+      }
+      .year {
+        @include rem(margin, 7px 0 0 12px);
+        @include rem(padding-left, 20px);
+        @include rem(font-size, 26px);
+        display: inline-block;
+        border-left: 1px solid $white;
+        line-height: 1;
+      }
+    }
+    .icon-bootcamp {
+      @include rem(margin-bottom, 8px);
+      @include rem(font-size, 40px);
+      display: block;
+    }
+  }
+
+  &__lead {
+    @include rem(max-width, 320px);
+    @include rem(margin, 0 auto 45px); 
+    @include rem(font-size, 32px);
+    font-weight: 100;
+    line-height: 1.3;
+    span {
+      display: block;
+    }
+  }
+
+}
+
+
+// @media only Smartphone
+// -----------------------------------------------------------------------------
+@include media-breakpoint-down(sm) {
+  .home-bootcamp {
+    &__info__inner {
+      .col__inner {
+        .home-bootcamp__heading--sm,
+        p {
+          @include sr-only;
+        }
+      }
+      .btn {
+        border-color: $green-100;
+        color: $green-100;
+      }
+    }
+    &__heading {
+      [class*="icon-"] {
+        @include rem(margin-bottom, 8px);
+        @include rem(font-size, 40px);
+        display: block;
+      }
+    }
+  }
+}
+
+
+
+// @media Tablet to up
+// -----------------------------------------------------------------------------
+@include media-breakpoint-up(md) {
+  .home-bootcamp {
+
+    &__intro {
+      @include rem(margin-bottom, 60px);
+      text-align: left;
+      .home-bootcamp__heading {
+        // @include rem(max-width, 250px);
+        @include rem(margin-bottom, 30px);
+      }
+      .row {
+        justify-content: center;
+      }
+      .col {
+        @include rem(max-width, 475px);
+        @include rem(flex-basis, 475px);
+        &:first-of-type {
+          margin-bottom: 0;
+          padding-right: ($grid-gutter + 4);
+          text-align: right;
+          .home-bootcamp__heading {
+            margin-left: auto;
+          }
+        }
+        &:last-of-type {
+          padding-left: ($grid-gutter + 4);
+        }
+      }
+    }
+    
+    &__info {
+      min-height: 1000px;
+      margin-top: -170px;
+      padding-top: 383px;
+      background-image: url('../images/bg-bootcamp-md.jpg');
+      overflow: hidden;
+      text-align: left;
+      &::before {
+        height: 312px;
+      }
+      &::after {
+        bottom: -460px;
+      }
+      .home-bootcamp__heading {
+        display: flex;
+        align-items: center;
+        .year {
+          @include rem(margin-left, 20px);
+          margin-bottom: 0;
+        }
+        [class*="icon"] {
+          @include rem(margin-right, 10px);
+          margin-bottom: 0;
+        }
+      }
+      .col {
+        flex-basis: 50%;
+        max-width: 50%;
+      }
+      .col:last-of-type {
+        position: relative;
+        [class*="heading"] {
+          @include rem(margin-bottom, 20px);
+          color: $green-200;
+        }
+        .btn {
+          @include rem(margin-top, 24px);
+        }
+      }
+      .col__bg {
+        position: absolute;
+        top: -20px;
+        right: -110%;
+        bottom: 0;
+        left: 0;
+        border-top-left-radius: 46px;
+        background-color: $white;
+        transform: $skewY-base;
+      }
+      .col__inner {
+        @include rem(padding-top, 125px);
+        @include rem(padding-bottom, 130px);
+        position: relative;
+        z-index: 10;
+        margin-right: -$grid-gutter;
+        padding-right: span(1);
+        padding-left: span(2);
+      }
+    }
+
+    &__info__inner {
+      padding-bottom: 0;
+      .data-sheet__metainfo {
+        margin-left: 0;
+      }
+    }
+
+    &__lead {
+      margin: 0;
+    }
+    
+  }
+}
+
+
+// @media Desktop to up
+// -----------------------------------------------------------------------------
+@include media-breakpoint-up(lg) {
+  .home-bootcamp {
+    &__info {
+      background-image: url('../images/bg-bootcamp-lg.jpg');
+      &__inner {
+        @include rem(padding-top, 25px);
+        margin-left: span(1);
+      }
+      .col__bg {
+        top: -120px;
+        left: -8%;
+      }
+      .col__inner {
+        @include rem(padding-top, 85px);
+        padding-right: span(1.9);
+      }
+    }
+
+    &__lead {
+      @include rem(max-width, 400px);
+    }
+  }
+}
+
+
+// @media Desktop Full HD to up
+// -----------------------------------------------------------------------------
+@include media-breakpoint-up(xl) {
+  .home-bootcamp {
+    &__info {
+      min-height: 1220px;
+      // min-height: 1170px;
+      // padding-top: 253px;
+      &::after {
+        bottom: -353px;
+      }
+    }
+  }
+}

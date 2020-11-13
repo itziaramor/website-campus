@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="25px" viewBox="0 0 13 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>mongodb</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Componentes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logos-de-cursos" transform="translate(-2070.000000, -1328.000000)" fill="#323232">
+            <g id="Group-15" transform="translate(2070.000000, 1326.000000)">
+                <path d="M6.96721311,24.2505077 L6.96721311,27 L5.73770492,27 L5.73770492,24.4089843 C2.23339208,21.7449659 0,17.7148144 0,13.2044922 C0,8.69416994 2.23339208,4.6640184 5.73770492,2 L5.73770492,20.6840004 C5.73770492,21.0235197 6.0129397,21.2987545 6.35245902,21.2987545 C6.69197833,21.2987545 6.96721311,21.0235197 6.96721311,20.6840004 L6.96721311,2.15847669 C10.3534411,4.82244708 12.5,8.78271868 12.5,13.2044922 C12.5,17.6262657 10.3534411,21.5865373 6.96721311,24.2505077 Z" id="mongodb"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>euro-circle</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="02-Ficha-curso" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02-E-Ficha-Curso" transform="translate(-950.000000, -577.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Módulo-1" transform="translate(-533.000000, 31.000000)">
+                <g id="Group-33" transform="translate(972.000000, 541.000000)">
+                    <g id="Group-16" transform="translate(488.000000, 2.000000)">
+                        <g id="euro-coin" transform="translate(20.000000, 0.000000)">
+                            <g id="Line_Icons" transform="translate(3.000000, 3.000000)">
+                                <g id="Group">
+                                    <path d="M13,0 C5.8318,0 0,5.8318 0,13 C0,20.1682 5.8318,26 13,26 C20.1682,26 26,20.1682 26,13 C26,5.8318 20.1682,0 13,0 Z M13,23.4 C7.2657,23.4 2.6,18.7343 2.6,13 C2.6,7.2657 7.2657,2.6 13,2.6 C18.7343,2.6 23.4,7.2657 23.4,13 C23.4,18.7356 18.7343,23.4 13,23.4 Z M9.2001,11.7 L7.8,11.7 L7.8,14.3 L9.2001,14.3 C9.7578,18.0986 12.7621,19.5 15.6,19.5 L15.6,16.9 C14.0959,16.9 12.3617,16.3982 11.8573,14.3 L15.6,14.3 L15.6,11.7 L11.8573,11.7 C12.3617,9.6031 14.0959,9.1 15.6,9.1 L15.6,6.5 C12.7621,6.5 9.7578,7.9014 9.2001,11.7 Z" id="euro-circle"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

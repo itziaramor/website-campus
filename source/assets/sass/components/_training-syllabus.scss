@@ -1,0 +1,316 @@
+// -----------------------------------------------------------------------------
+// TRAINING SYLLABUS
+// -----------------------------------------------------------------------------
+
+.training-syllabus {
+  position: relative;
+  margin-top: -150px;
+  padding-top: 274px;
+  padding-bottom: 318px;
+  background: url('../images/bg-training-syllabus.jpg') no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 5;
+  }
+  &::before {
+    top: -8px;
+    height: 306px;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjU0NHB4IiBoZWlnaHQ9IjMwNnB4IiB2aWV3Qm94PSIwIDAgMjU0NCAzMDYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUwLjIgKDU1MDQ3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5Db21iaW5lZC1TaGFwZTwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJib290Y2FtcC1zaGVldC10b3AiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMjQxLjU3NTc2LDMwNS44MjA5MSBMMCw4IEwwLDAuNSBMMjU0NCwwLjUgTDI1NDQsOCBMMTMwMi4zNzk4LDMwNS41OTk1OSBDMTI5OS41MDczNywyOTEuNTY0MDE2IDEyODYuOTk3MzksMjgxIDEyNzIsMjgxIEMxMjU2LjkyMzg4LDI4MSAxMjQ0LjM2MTM2LDI5MS42NzUyMTYgMTI0MS41NzU3NiwzMDUuODIwOTEgWiIgaWQ9IkNvbWJpbmVkLVNoYXBlIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=') no-repeat;
+    background-position: center bottom;
+  }
+  &::after {
+    bottom: -280px;
+    height: 550px;
+    background-color: $white;
+    transform: skewY(11deg);
+  }
+
+  .animated-gradient::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 220px;
+    height: 320px;
+    border-top-right-radius: 25px;
+    background-color: rgba($white, .4);
+    transform: skewY(11deg);
+  }
+
+  &__icon {
+    position: relative;
+    left: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 100px;
+    margin: 1px auto 18px;
+    background-color: $white;
+    text-align: center;
+    
+    [class*="icon"] {
+      @include rem(font-size, 30px);
+      position: relative;
+      z-index: 5;
+      color: $blue-300;
+    }
+  }
+
+  .site-heading--h3 {
+    color: $white;
+    line-height: 1.4;
+    text-align: center;
+    span {
+      display: block;
+    }
+  }
+
+  &__download {
+    @include rem(margin-bottom, 35px);
+    text-align: center;
+    .btn {
+      color: $white;
+      font-size: $font-size-base;
+      @include hover-focus {
+        color: $green-100;
+      }
+    }
+    [class*="icon"] {
+      @include rem(margin-bottom, 3px);
+      @include rem(font-size, 32px);
+      display: block;
+    }
+    &__form--wrapper {
+      .btn {
+        .spinner {
+          min-width: rem(193px);
+          display: none;
+
+           > span {
+            background-color: $white;
+           }
+        }
+      }
+    }
+  }
+
+  .training-syllabus__heading {
+    @include rem(margin-top, 40px);
+    @include rem(margin-bottom, 27px);
+    @include rem(font-size, 24px);
+    color: $white;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  &__download__form {
+    @include rem(max-width, 560px);
+    @include rem(margin, 0 auto 30px);
+    color: $white;
+    .form-control {
+      input {
+        background-color: $white;
+      }
+    }
+    a {
+      color: $green-100;
+    }
+    .contact__form__legal {
+      @include rem(max-width, 345px);
+      @include rem(margin-top, 20px);
+    }
+    + .form-btn {
+      margin: 0 auto 4.5rem;
+    }
+  }
+
+  &__download__thanks {
+    @include rem(max-width, 425px);
+    @include rem(margin, 40px auto 4.5rem);
+    @include rem(font-size, 24px);
+    color: $white;
+    line-height: 1.4;
+    text-align: center;
+    [class*="icon"] {
+      @include rem(margin-bottom, 15px);
+      @include rem(font-size, 60px);
+      display: block;
+    }
+  }
+
+  &__chapter {
+    margin: 0 auto;
+    color: $white;
+  }
+
+  .site-heading--h4 {
+    @include rem(font-size, 18px);
+    @include underline-heading($white);
+    color: $white;
+    line-height: 1.5;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .skills {
+    @include rem(margin, 0 0 15px);
+  }
+
+
+  // @media Smartphone to down
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-down(sm) {
+    [class*="site-heading"] {
+      color: $white;
+    }
+    .btn {
+      &[aria-expanded] {
+        @include rem(margin, 8px auto 30px);
+        display: block;
+        color: $white;
+      }
+      [class*="icon-"] {
+        @include rem(font-size, 35px);
+        color: $white;
+      }
+      &[aria-expanded="true"] {
+        @include rem(margin-bottom, 0);
+        [class*="icon-"]::before {
+          content: $icon-minus-circle;
+        }
+      }
+    }
+    .accordion__pane {
+      text-align: center;
+      &.show {
+        height: auto;
+        overflow: initial;
+      }
+    }
+    .accordion__body {
+      @include rem(padding-bottom, 45px);
+    }
+
+    &__chapter {
+      .skills {
+        display: none;
+      }
+    }
+
+    // In training sheet
+    &__chapter-list {
+      .training-syllabus__text {
+        text-align: left;
+      }
+    }
+  }
+
+
+  // @media Tablet to down
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-down(md) {
+    &__chapter {
+      .skills {
+        &__item {
+          @include rem(font-size, 19px);
+        }
+      }
+    }
+  }
+
+
+  // @media Tablet to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(md) {
+    padding-bottom: 430px;
+    
+    &__icon {
+      left: 0
+    }
+
+    &__chapter {
+      max-width: span(11);
+    }
+
+    &__chapter + &__chapter {
+      @include rem(margin-top, 35px);
+    }
+
+    // In training sheet
+    &__chapter-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: span(11);
+      margin-right: auto;
+      margin-left: auto;
+      .training-syllabus__chapter {
+        @include rem(margin, 35px 0 0);
+        flex: 1 0 span(5.5);
+        max-width: span(5.5);
+      }
+      .site-heading--h4 {
+        @include underline-heading($emerald-100, 0);
+        text-align: left;
+      }
+      li ul {
+        @include rem(padding-left, 25px);
+      }
+    }
+
+    .site-heading--h4 {
+      @include rem(margin-bottom, 15px);
+    }
+
+    .animated-gradient::after {
+      width: 410px;
+      height: 370px;
+    }
+    .btn {
+      &[aria-expanded] {
+        display: none;
+      }
+    }
+    .accordion__pane {
+      height: auto;
+      overflow: initial;
+    }
+  }
+
+
+  // @media Desktop to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(lg) {
+    &__chapter {
+      max-width: span(8);
+    }
+    &__chapter-list {
+      max-width: span(7);
+      .training-syllabus__chapter {
+        flex-basis: span(5);
+        max-width: span(5);
+      }
+    }
+    .animated-gradient::after {
+      width: 750px;
+      height: 400px;
+    }
+    &__download__form {
+      @include rem(margin-left, 242px);
+      .g-recaptcha {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+}

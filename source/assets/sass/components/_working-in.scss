@@ -1,0 +1,229 @@
+// -----------------------------------------------------------------------------
+// HOME: WORKING IN
+// -----------------------------------------------------------------------------
+
+.working-in {
+  position: relative;
+  z-index: 5;
+
+  &__heading {
+    @include rem(max-width, 425px);
+    @include rem(margin-bottom, 38px);
+    @include underline-heading($green-200, 0);
+
+    &:after {
+      @include rem(margin-top, 40px);
+    }
+  }
+
+  &__list {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  &__item {
+    @include rem(margin-bottom, 40px);
+    flex: 1 0 span(6);
+    max-width: span(6);
+    padding: 0 gutter();
+    text-align: center;
+
+    img:not(.no-fluid) {
+      width: 80%;
+      height: auto;
+
+      .incompany__page & {
+        width: 65%;
+      }
+    }
+  }
+
+  // LOGO ALIGNMENT EXCEPTIONS
+  .logo-we {
+    transform: translateY(-1rem);
+  }
+
+  // WORKING IN BOOTCAMP
+  $this: &;
+
+  &--bootcamp {
+    margin-bottom: 6rem;
+
+    #{$this}__heading {
+      @include rem(max-width, 425px);
+      margin: 0 auto 2rem;
+      font-size: 1.5rem;
+      color: $green-200;
+      text-align: center;
+      @include underline-heading($gray-800, auto);
+
+      &:after {
+        @include rem(margin-top, 40px);
+      }
+
+      > [class^="icon-"] {
+        display: block;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    #{$this}__list {
+      display: grid;
+      list-style-type: none;
+      padding-left: 0;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem 1rem;
+    }
+
+    #{$this}__item {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      max-width: 100%;
+      padding: 0 gutter();
+      margin-bottom: 0;
+      text-align: center;      
+    }
+
+    #{$this}__text {
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+  }
+
+
+  // @media Tablet to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(md) {
+    &__item {
+      @include rem(margin-bottom, 80px);
+      flex-basis: span(3);
+      max-width: span(3);
+      text-align: left;
+      img {
+        width: auto;
+      }
+    }
+
+    // WORKING IN BOOTCAMP
+    $this: &;
+
+    &--bootcamp {
+      margin-bottom: 8rem;
+
+      #{$this}__text {
+        width: span(10);
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      #{$this}__list {
+        grid-gap: 3rem 1rem;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+
+
+  // @media Desktop to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(lg) {
+    margin: 0;
+
+    &__content {
+      padding-left: span(.5);
+    }
+
+    &__list {
+      margin-bottom: 80px;
+    }
+    
+    &__item {
+      flex-basis: span(2);
+      max-width: span(2);
+      padding: 0 gutter();
+      &:nth-child(3),
+      &:nth-child(9) {
+        padding-left: 43px;
+      }
+      &:nth-child(5),
+      &:nth-child(11) {
+        padding-left: 10px;
+      }
+      &.nh-hoteles {
+        margin-right: 30px;
+      }
+      .incompany__page & {
+        flex-basis: auto;
+        max-width: none;
+        padding: 0;
+      }
+    }
+
+    // WORKING IN BOOTCAMP
+    $this: &;
+
+    &--bootcamp {
+      margin-bottom: 10rem;
+      
+      #{$this}__list {
+        grid-gap: 4rem 1rem;
+        max-width: span(10);
+        margin-left: auto;
+        margin-right: auto;
+      } 
+      #{$this}__text {
+        width: span(6);
+      } 
+    }    
+  }
+
+  @include media-breakpoint-up(xl) {
+    // WORKING IN BOOTCAMP
+    $this: &;
+
+    &--bootcamp {
+      margin-bottom: 15rem;
+
+      #{$this}__list {
+        grid-gap: 5rem 1rem;
+        max-width: span(8);
+      } 
+    }   
+  }
+}
+  
+
+// BROWSER HACKS
+.ie11-browser {
+  .working-in--bootcamp {
+    
+    .working-in__list {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 0 auto 80px;
+      list-style: none;
+    }
+
+    .working-in__item {
+      @include rem(margin-bottom, 40px);
+      flex-basis: span(4);
+      max-width: span(4);
+      padding: 0 gutter();
+      text-align: center;
+    }   
+  }
+}

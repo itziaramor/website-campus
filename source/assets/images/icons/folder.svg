@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="29px" viewBox="0 0 30 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>folder</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="02-Ficha-curso" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02-E-Ficha-Curso" transform="translate(-548.000000, -1103.000000)" fill="#585858" fill-rule="nonzero">
+            <g id="folder-network" transform="translate(548.000000, 1093.000000)">
+                <g id="Line_Icons" transform="translate(0.000000, 10.000000)">
+                    <g id="Group">
+                        <path d="M27,4.35 L14.625,4.35 L12.15,1.16 C11.5875,0.43355 10.689,0 9.75,0 L3,0 C1.3455,0 0,1.3021 0,2.9 L0,18.85 C0,20.44935 1.3455,21.75 3,21.75 L13.5,21.75 L13.5,26.1 L9,26.1 L9,29 L21,29 L21,26.1 L16.5,26.1 L16.5,21.75 L27,21.75 C28.6545,21.75 30,20.44935 30,18.85 L30,7.25 C30,5.6521 28.6545,4.35 27,4.35 Z M3,18.85 L3,2.9 L9.75,2.9 L12.225,6.09 C12.7875,6.81645 13.686,7.25 14.625,7.25 L27,7.25 L27.0015,18.85 L3,18.85 Z M25.5,29 C24.6715729,29 24,28.3508129 24,27.55 C24,26.7491871 24.6715729,26.1 25.5,26.1 C26.3284271,26.1 27,26.7491871 27,27.55 C27,28.3508129 26.3284271,29 25.5,29 Z M4.5,29 C3.67157288,29 3,28.3508129 3,27.55 C3,26.7491871 3.67157288,26.1 4.5,26.1 C5.32842712,26.1 6,26.7491871 6,27.55 C6,28.3508129 5.32842712,29 4.5,29 Z" id="folder"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,54 @@
+// -----------------------------------------------------------------------------
+// GRID
+// -----------------------------------------------------------------------------
+
+
+$susy: (
+  'columns': susy-repeat(12),
+  'gutters': $grid-gutter,
+  'spread': 'narrow',
+  'container-spread': 'narrow',
+);
+
+
+// Container
+// -----------------------------------------------------------------------------
+.container,
+.container--fluid {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: $grid-gutter-sm;
+  padding-left: $grid-gutter-sm;
+
+  @include media-breakpoint-up(md) {
+    padding-right: $grid-gutter-md;
+    padding-left: $grid-gutter-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-right: $grid-gutter;
+    padding-left: $grid-gutter;
+  }
+}
+
+.container {
+  width: $grid-container;
+  max-width: 100%;
+}
+
+
+// Row and Col
+// -----------------------------------------------------------------------------
+@include media-breakpoint-up(md) {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -$grid-gutter;
+  }
+
+  .col {
+    flex: 1 0 0;
+    padding: 0 $grid-gutter;
+  }
+}

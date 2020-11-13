@@ -1,0 +1,65 @@
+// -----------------------------------------------------------------------------
+// SLIDER
+// -----------------------------------------------------------------------------
+
+.slider {
+  @include rem(margin-top, 40px);
+  @include rem(margin-bottom, 140px);
+
+  &__item {
+    text-align: center;
+  }
+
+  &__image {
+    @include rem(margin, 0 auto 15px);
+    width: 192px;
+    height: 192px;
+    transition: transform .35s ease;
+    img {
+      @include img-fluid;
+      border-radius: 100px;
+    }
+  }
+
+  &__name,
+  &__quote {
+    padding: 0 35px;
+    .current & {
+      position: relative;
+      z-index: 20;
+    }
+  }
+
+  &__name {
+    @include rem(font-size, 18px);
+    @include underline-heading;
+    color: $purple-200;
+    font-weight: 400;
+  }
+
+  &__career {
+    @include rem(font-size, 14px);
+    display: block;
+    color: $green-200;
+    font-weight: 300;
+  }
+
+  &__quote {
+    line-height: 1.6;
+  }
+
+
+  // @media Desktop to up
+  @include media-breakpoint-up(lg) {
+    &__item {
+      a {
+        @include hover-focus {
+          .slider__image {
+            transform: rotate(-3deg);
+            transition: transform .35s ease;
+          }
+        }
+      }
+    }
+  }
+}

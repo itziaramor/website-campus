@@ -1,0 +1,111 @@
+// -----------------------------------------------------------------------------
+// CAMPAIGN: OFFER
+// -----------------------------------------------------------------------------
+
+
+.campaign-offer {
+  padding: rem(78px) 0 0;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  
+  &__image {
+    max-width: 765px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: span(2);
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+      right: span(1);
+    }
+    @include media-breakpoint-up(xl) {
+      right: span(2);
+    }
+    
+    img {
+      width: 100%;
+    }
+  }
+  
+  &__description {
+    padding-bottom: rem(50px);
+    text-align: left;
+    position: relative;
+    z-index: 2;
+
+    @include media-breakpoint-up(md) {
+      max-width: span(9);
+    }
+    @include media-breakpoint-up(lg) {
+      max-width: span(5);
+    }
+  }
+  
+  &__list {
+    margin-top: rem(38px);
+    padding-left: 0;
+    list-style: none;
+    
+    li {
+      padding: rem(21px) 0 rem(50px);
+      color: $gray-800;
+      position: relative;
+
+      h3 {
+        font-family: $font-family-base;
+        font-weight: $font-weight-normal;
+        font-size: rem(18px);
+        line-height: rem(26px);
+      }
+
+      p {
+        font-family: $font-family-base;
+        font-weight: $font-weight-base;
+        font-size: rem(16px);
+        line-height: rem(29px);
+      }
+
+      &::before {
+        content: '';
+        width: rem(63px);
+        height: rem(1px);
+        background-color: $gray-700;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+  }
+
+  &__logo {
+    max-width: rem(159px);
+    margin-bottom: rem(40px);
+    display: flex;
+
+    img {
+      max-width: 100%;
+    }
+  }
+  
+  h2 {
+    margin-bottom: rem(8px);
+    font-family: $font-family-base;
+    font-size: rem(24px);
+    font-weight: $font-weight-base;
+    line-height: rem(32px);
+    color: $purple-200;
+  }
+  
+  p {
+    margin-bottom: 0;
+    font-family: $font-family-base;
+    font-size: rem(16px);
+    font-weight: $font-weight-base;
+    line-height: rem(29px);
+  }
+}
+

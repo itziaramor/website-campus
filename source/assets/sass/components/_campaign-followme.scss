@@ -1,0 +1,263 @@
+// -----------------------------------------------------------------------------
+// CAMPAIGN: FOLLOWME
+// -----------------------------------------------------------------------------
+
+
+.campaign-followme {
+  background-color: $white;
+  text-align: center;
+  overflow: hidden;
+  z-index: 10;
+  
+  @include media-breakpoint-up(lg) {
+    max-width: 406px;
+    width: 406px;
+    box-shadow: 4px 4px 11px 0 rgba(0, 0, 0, 0.26);
+    position: fixed;
+    top: 98px;
+    right: 30px;
+  }
+  
+  &__claim {
+    margin-bottom: 0;
+    padding: rem(20px) rem(24px);
+    background-color: $purple-200;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.57);
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.16);
+    font-family: $font-family-sans-serif;
+    font-size: rem(18px);
+    font-weight: $font-weight-medium;
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    
+    span {
+      display: inline-block;
+    }
+    
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
+      padding: rem(13px) rem(24px);
+      box-shadow: 0 8px 12px 0 $black;
+    }
+  }
+  
+  &__header {
+    display: none;
+    height: rem(109px);
+    background-color: $white;
+    justify-content: center;
+    background-image: url('../images/campaign/campaign-followme-bg.svg');
+    
+    @include media-breakpoint-up(lg) {
+      display: flex;
+    }
+  }
+
+  &__heading {
+    margin-top: 26px;
+    font-family: $font-family-sans-serif;
+    font-size: rem(24px);
+    font-weight: $font-weight-normal;
+    line-height: rem(32px);
+    color: $white;
+  }
+  
+  &__footer {
+    padding: rem(19px) rem(10px);
+    background-color: $gray-800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    p {
+      margin-bottom: 0;
+      font-family: $font-family-sans-serif;
+      font-size: rem(24px);
+      font-weight: $font-weight-normal;
+      line-height: rem(32px);
+      color: $white;
+      
+      a {
+        color: $white;
+        
+        @include media-breakpoint-down(sm) {
+          display: inline-block;
+        }
+        @include media-breakpoint-up(lg) {
+          pointer-events: none;
+        }
+      }
+    }
+  }
+  
+  &__info {
+    padding: 0 rem(24px);
+    
+    &-content {
+      max-width: rem(273px);
+      margin: 0 auto;
+
+      .btn {
+        margin-bottom: rem(30px);
+      }
+    }
+    
+    &-title {
+      margin: rem(53px) 0 rem(10px);
+      font-family: $font-family-sans-serif;
+      font-size: rem(24px);
+      font-weight: $font-weight-normal;
+      line-height: rem(32px);
+      color: $gray-800;
+      text-align: center;
+      
+      @include media-breakpoint-up(lg) {
+        margin: rem(44px) 0 rem(10px);
+      }
+    }
+    
+    &-text {
+      margin-bottom: rem(50px);
+      font-family: $font-family-sans-serif;
+      font-size: rem(16px);
+      font-weight: $font-weight-normal;
+      line-height: rem(29px);
+    }
+    
+    .btn {
+      margin-bottom: rem(29px);
+      width: 100%;
+    }
+  }
+  
+  &__whatsapp {
+    max-width: rem(190px);
+    margin: 0 auto rem(16px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .whatsapp__icon {
+      margin-bottom: rem(4px);
+      flex: 1 0 32px;
+      width: 32px;
+      height: 32px;
+      background-position: right center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('../images/logo-whatsapp.svg');
+      transition: all ease-out 0.3s;
+    }
+    
+    span {
+      font-family: $font-family-sans-serif;
+      font-size: rem(12px);
+      font-weight: $font-weight-bold;
+      line-height: rem(19px);
+      color: $gray-800;
+    }
+    
+    &:hover {
+      .whatsapp__icon {
+        background-image: url('../images/logo-whatsapp-hover.svg');
+      }
+    }
+  }
+  
+  &__form {
+    padding: 0 rem(28px);
+  }
+  
+  // form
+  .campaign-form {
+    max-width: rem(308px);
+    margin: 0 auto;
+    
+    @include media-breakpoint-up(lg) {
+      max-width: 100%;
+    }
+    
+    &__title {
+      margin: rem(53px) 0 rem(36px);
+      font-family: $font-family-sans-serif;
+      font-size: rem(24px);
+      font-weight: $font-weight-medium;
+      line-height: rem(32px);
+      color: $gray-800;
+      text-align: center;
+      
+      @include media-breakpoint-up(lg) {
+        margin: rem(45px) 0 rem(40px);
+      }
+      
+      @include media-breakpoint-up(lg) {
+        margin: rem(14px) 0 rem(20px);
+        font-size: rem(18px);
+      }
+    }
+    
+    .form-group {
+      label {
+        font-size: rem(18px);
+        line-height: rem(16px);
+        color: $gray-800;
+      }
+      
+      &--check {
+        margin-top: rem(16px);
+      }
+      &--flex {
+        flex-direction: column;
+      }
+      
+      + .form-group {
+        margin-top: rem(23px);
+      }
+      
+      .error-message {
+        text-align: left;
+      }
+    }
+    .form-check {
+      max-width: 22.375rem;
+      margin: 0 auto;
+      text-align: left;
+      
+      label {
+        font-size: rem(14px);
+        line-height: rem(22px);
+      }
+      
+      a {
+        color: $purple-200;
+      }
+    }  
+    .form-btn {
+      max-width: 22.375rem;
+      width: 100%;
+      margin-left: auto;
+      margin: rem(20px) auto rem(24px);
+      
+      @include media-breakpoint-up(md) {
+        margin: rem(20px) auto rem(68px);
+      }
+      
+      @include media-breakpoint-up(lg) {
+        margin: rem(20px) auto rem(30px);
+      }
+      
+      .btn {
+        width: 100%;
+        
+        @include media-breakpoint-down(sm) {
+          padding: .5rem 0.90625rem;
+        }
+      }
+    }
+  }
+}
+
+
+

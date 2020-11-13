@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// ASPARAGUS
+// Background asparagus in low contrast
+// -----------------------------------------------------------------------------
+
+@mixin asparagus($top: 50%) {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: $asparagus-height;
+    opacity: .075;
+    transform: $skewY-base-clockwise;
+  }
+
+  &::before {
+    top: calc((#{$top} - #{$asparagus-height} / 1.8));
+    background-color: $green-200;
+  }
+
+  &::after {
+    top: calc((#{$top} - #{$asparagus-height} / 1.8) + #{$asparagus-height});
+    background-color: $blue-300;
+  } 
+}

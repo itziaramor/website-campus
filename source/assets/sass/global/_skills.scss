@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// SKILLS
+// -----------------------------------------------------------------------------
+
+.skills {
+  @include rem(margin-top, 25px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__item {
+    @include rem(font-size, 14px);
+    display: flex;
+    align-items: center;
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+    [class*="icon"] {
+      @include rem(margin-right, 6px);
+      @include rem(font-size, 24px);
+    }
+  }
+
+}

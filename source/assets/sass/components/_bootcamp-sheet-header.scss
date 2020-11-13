@@ -1,0 +1,346 @@
+// -----------------------------------------------------------------------------
+// BOOTCAMP SHEET:HEADER
+// -----------------------------------------------------------------------------
+
+.bootcamp-sheet {
+  &__header {
+    position: relative;
+    min-height: 920px;
+    padding-bottom: 150px;
+    background: $blue-300 url('../images/bg-bootcamp-sm.jpg') center top
+      no-repeat;
+    background-size: cover;
+    text-align: center;
+    overflow: hidden;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      left: 0;
+      z-index: 5;
+    }
+    &::before {
+      top: $navbar-height-sm;
+      height: 299px;
+      background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjU0NHB4IiBoZWlnaHQ9IjMwMXB4IiB2aWV3Qm94PSIwIDAgMjU0NCAzMDEiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUwLjIgKDU1MDQ3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5Db21iaW5lZCBTaGFwZTwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJib290Y2FtcC10b3AiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLCAtMzAyLjAwMDAwMCkiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyI+CiAgICAgICAgICAgIDxnIGlkPSJib290Y2FtcC1zaGVldC10b3AiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLCAzMDIuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTIzOS4xMDIzNCwzMDAuMzQyMjc4IEwwLDcuNSBMMCwwIEwyNTQ0LDAgTDI1NDQsNy41IEwxMzA2LjgzNzY0LDI5OS42NTYwNTcgQzEzMDUuMTU3NzgsMjgyLjQ0Nzg5OSAxMjkwLjY0OTM1LDI2OSAxMjczLDI2OSBDMTI1NS4xMTY3MSwyNjkgMTI0MC40NTgxNiwyODIuODA2NzU1IDEyMzkuMTAyMzQsMzAwLjM0MjI3OCBaIiBpZD0iQ29tYmluZWQtU2hhcGUiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+')
+        no-repeat;
+      background-position: center -130px;
+    }
+    &::after {
+      bottom: -546px;
+      height: 610px;
+      background-color: $white;
+      transform: skewY(11deg);
+      outline: 25px solid rgba($white, 0.4);
+    }
+
+    // MODIFERS
+    &--grant {
+      &::before {
+        @include rem(height, 350px);
+        background-position: center -10px;
+      }
+    }
+  }
+
+  &__header__inner {
+    position: relative;
+    z-index: 100;
+    padding-top: 30px;
+
+    .bootcamp-sheet__header--grant & {
+      padding-top: 10px;
+    }
+  }
+
+  &__heading {
+    @include rem(min-height, 85px);
+    margin-bottom: 0;
+    small {
+      @include rem(margin-top, 8px);
+      @include rem(font-size, 18px);
+      display: block;
+      color: $green-200;
+      font-weight: 400;
+    }
+  }
+
+  &__header .data-sheet__metainfo {
+    @include rem(max-width, 610px);
+    color: $white;
+  }
+
+  &__intro {
+    @include rem(padding-top, 46px);
+    color: $white;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 22px;
+      right: 0;
+      left: 0;
+      width: 72px;
+      height: 72px;
+      margin: 0 auto;
+      background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTE3cHgiIGhlaWdodD0iMTE3cHgiIHZpZXdCb3g9IjAgMCAxMTcgMTE3IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA1MS4zICg1NzU0NCkgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+T3ZhbCA1PC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IHgxPSI0NC41NzkzMTY2JSIgeTE9IjQ2LjU1MzQ5ODElIiB4Mj0iOTMuMjYyNTMzJSIgeTI9IjY3LjE2MTA4NyUiIGlkPSJsaW5lYXJHcmFkaWVudC0xIj4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0ZGRkZGRiIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjOTc5Nzk3IiBzdG9wLW9wYWNpdHk9IjAiIG9mZnNldD0iMTAwJSI+PC9zdG9wPgogICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8L2RlZnM+CiAgICA8ZyBpZD0iMDEtRmljaGEtYm9vdGNhbXAiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIG9wYWNpdHk9IjAuNTc3NDU1MzU3Ij4KICAgICAgICA8ZyBpZD0iMDEtRS1GaWNoYS1Cb290Y2FtcCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTY0Ni4wMDAwMDAsIC0yOTYuMDAwMDAwKSIgc3Ryb2tlPSJ1cmwoI2xpbmVhckdyYWRpZW50LTEpIiBzdHJva2Utd2lkdGg9IjMiPgogICAgICAgICAgICA8ZyBpZD0iTcOzZHVsby0xIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTQ1LjAwMDAwMCwgMTkuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8ZyBpZD0iTcOzZHVsby01Ij4KICAgICAgICAgICAgICAgICAgICA8ZyBpZD0iRm9uZG8iPgogICAgICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsLTUiIGN4PSIxMjQ5LjUiIGN5PSIzMzUuNSIgcj0iNTYuNSI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=')
+        no-repeat;
+      background-position: 0 0;
+      background-size: cover;
+    }
+    [class*='icon'] {
+      @include rem(font-size, 22px);
+    }
+    > p {
+      @include rem(margin-top, 50px);
+      @include rem(margin-bottom, 33px);
+    }
+  }
+
+  &__nav {
+    display: none;
+  }
+
+  // @media Tablet to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(md) {
+    &__header {
+      // min-height: 1010px;
+      min-height: 950px;
+      background-image: url('../images/bg-bootcamp-md.jpg');
+      background-position: center 20px;
+      &::before {
+        //top: ($navbar-height - 8);
+        top: 38px;
+        background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjU0NHB4IiBoZWlnaHQ9IjI5N3B4IiB2aWV3Qm94PSIwIDAgMjU0NCAyOTciIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUxLjMgKDU3NTQ0KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5Db21iaW5lZCBTaGFwZTwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxwYXRoIGQ9Ik0xMzI2LjE0MzQ1LDI5Ni4xODc3NTMgQzEzMjEuNTA4MzksMjcwLjIxNTc5NyAxMjk4LjgwODg0LDI1MC41IDEyNzEuNTA0NDMsMjUwLjUgQzEyNDQuMjc4ODgsMjUwLjUgMTIyMS42MzE2NSwyNzAuMTAyMDUgMTIxNi45MDYwMiwyOTUuOTYyODI1IEwwLDggTDAsMC41IEwyNTQ0LDAuNSBMMjU0NCw4IEwxMzI2LjE0MzQ1LDI5Ni4xODc3NTMgWiIgaWQ9IkNvbWJpbmVkLVNoYXBlIiBmaWxsPSIjRkZGRkZGIiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD4KICAgIDwvZz4KPC9zdmc+')
+          no-repeat;
+        background-position: center top;
+      }
+      &::after {
+        bottom: -490px;
+      }
+      .data-sheet__metainfo {
+        justify-content: center;
+      }
+    }
+
+    &__intro {
+      @include rem(max-width, 610px);
+    }
+
+    &__intro,
+    &__header .data-sheet__metainfo {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    &__header__inner {
+      padding-top: 70px;
+
+      .bootcamp-sheet__header--grant & {
+        padding-top: 70px;
+      }
+    }
+
+    &__heading {
+      @include rem(font-size, 36px);
+      small {
+        @include rem(font-size, 24px);
+        font-weight: $headings-font-weight;
+      }
+    }
+
+    &__intro {
+      @include rem(padding-top, 68px);
+      &::before {
+        top: 30px;
+        left: -5px;
+        width: 113px;
+        height: 120px;
+        background-size: initial;
+      }
+      [class*='icon'] {
+        @include rem(font-size, 43px);
+      }
+    }
+  }
+
+  // @media Desktop Full HD to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(xl) {
+    &__header {
+      // min-height: 1230px;
+      min-height: 1200px;
+      background-image: url('../images/bg-bootcamp-lg.jpg');
+      &::after {
+        bottom: -263px;
+      }
+    }
+    &__nav {
+      display: block;
+      height: 100%;
+      position: relative;
+      z-index: 20;
+      max-width: 1440px;
+      margin: auto;
+      margin-top: -4rem;
+
+      &__inner {
+        @include rem(width, 284px);
+        @include rem(padding, 48px 20px 60px 44px);
+        // position: absolute;
+        // right: 0;
+        // bottom: 255px;
+        position: relative;
+        z-index: 100;
+        text-align: left;
+        margin-left: auto;
+        // background: red;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: -60%;
+          left: 0;
+          bottom: 0;
+          border-top-left-radius: 15px;
+          border-bottom-left-radius: 26px;
+          background-color: $white;
+          transform: $skewY-base;
+          width: 100vw;
+
+          .Bootcamp &,
+          .AngularAnimations & {
+            top: -45%;
+          }
+        }
+      }
+      &__heading,
+      a,
+      &-solidarity,
+      .divider {
+        @include rem(font-size, 14px);
+        position: relative;
+        z-index: 5;
+      }
+      &__heading {
+        @include rem(margin-bottom, 10px);
+        color: $green-200;
+      }
+      a {
+        @include rem(padding, 3px 0);
+        display: block;
+        color: $body-color;
+        font-weight: 300;
+        &.bootcamp-sheet__nav__download {
+          @include rem(margin-top, 25px);
+          display: flex;
+          align-items: center;
+          color: $link-color;
+        }
+        [class*='icon'] {
+          @include rem(margin-right, 10px);
+          @include rem(font-size, 22px);
+        }
+        @include hover-focus {
+          color: $green-200;
+        }
+      }
+      .divider {
+        @include underline-heading($body-color, 0);
+      }
+      &-solidarity {
+        [role='heading'],
+        a {
+          @include rem(font-size, 12px);
+        }
+        [role='heading'] {
+          margin-bottom: 0;
+          color: $green-200;
+          font-weight: 400;
+        }
+        a {
+          padding: 0;
+          color: $link-color;
+          @include hover-focus {
+            color: $link-hover-color;
+          }
+        }
+        img {
+          @include rem(margin, 8px 0 12px);
+          display: block;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1600px) {
+    &__nav {
+      &__inner {
+        &::before {
+          top: -75%;
+
+          .Bootcamp &,
+          .AngularAnimations & {
+            top: -55%;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1700px) {
+    &__nav {
+      &__inner {
+        &::before {
+          //top: -80%;
+          // bottom: 50%;
+
+          .Bootcamp &,
+          .AngularAnimations & {
+            // top: -50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Header backgrounds
+// -----------------------------------------------------------------------------
+.bootcamp-sheet__header {
+  &[class*='training'] {
+    background-color: $green-300;
+    background-position: center 25px;
+  }
+  &.training {
+    &-angular {
+      background-image: url('../images/training/bg-angular.jpg');
+    }
+    &-docker {
+      background-image: url('../images/training/bg-docker.jpg');
+    }
+    &-nodejs {
+      background-image: url('../images/training/bg-nodejs.jpg');
+    }
+    &-css {
+      background-image: url('../images/training/bg-css.jpg');
+    }
+    &-vuejs {
+      background-image: url('../images/training/bg-vuejs.jpg');
+    }
+    &-react {
+      background-image: url('../images/training/bg-react.png');
+    }
+    &-javascript {
+      background-image: url('../images/training/bg-javascript.png');
+    }
+  }
+
+  @media (max-width: 1400px) {
+    &[class*='training'] {
+      background-size: initial;
+    }
+  }
+}

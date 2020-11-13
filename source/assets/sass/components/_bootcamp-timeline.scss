@@ -1,0 +1,233 @@
+// -----------------------------------------------------------------------------
+// BOOTCAMP TIMELINE
+// -----------------------------------------------------------------------------
+
+.bootcamp-timeline {
+
+  $tab-icon-size: 63px;
+
+  @include rem(margin-bottom, 75px);
+  position: relative;
+  z-index: 5;
+  margin-top: -160px;
+  
+  .site-heading--h3 {
+    @include underline-heading($green-200, 0);
+  }
+
+  &__intro {
+    @include rem(margin-bottom, 40px);
+  }
+
+  &__tabs {
+    @include rem(padding, 55px 0 48px);
+    border-top: 8px solid #d5ede8;
+    background-color: rgba($emerald-100, .9);
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  &__tabslist {
+    display: flex;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  &__item {
+    @include rem(height, 180px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.4;
+    &:not(:last-child) {
+      @include rem(flex, 1 0 160px);
+      &::before {
+        content: "";
+        position: absolute;
+        top: calc(50% - 1px);
+        right: 0;
+        left: $tab-icon-size;
+        border-bottom: 1px solid $white;
+      }
+    }
+    .bootcamp-timeline__tab-label {
+      position: absolute;
+      left: 0;
+    }
+    &:last-child {
+      text-align: right;
+      a,
+      .bootcamp-timeline__tab-label {
+        padding-right: 30px;
+      }
+      .bootcamp-timeline__tab-label {
+        right: 0;
+        left: auto;
+      }
+    }
+    &:nth-child(odd) {
+      .bootcamp-timeline__tab-label {
+        top: 0;
+      }
+    }
+    &:nth-child(even) {
+      .bootcamp-timeline__tab-label {
+        bottom: 0;
+      }
+    }
+    a {
+      color: $white;
+      white-space: nowrap;
+      @include hover-focus {
+        .bootcamp-timeline__icon {
+          background-color: #65beaa;
+        }
+      }
+      &[aria-selected="true"] {
+        &::after {
+          $marker-size: 21px;
+          content: "";
+          position: absolute;
+          bottom: -60px;
+          left: ($tab-icon-size / 2 - ($marker-size / 2));
+          z-index: 5;
+          width: $marker-size;
+          height: $marker-size;
+          border-radius: 4px;
+          background-color: $white;
+          transform: rotate(45deg);
+        }
+        .bootcamp-timeline__icon {
+          background-color: rgba($white, .3);
+        }
+      }
+    }
+    time,
+    .time {
+      display: block;
+    }
+    .bootcamp-timeline__icon {
+      @include rem(width, $tab-icon-size);
+      @include rem(height, $tab-icon-size);
+      @include rem(font-size, 26px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $white;
+      border-radius: 100px;
+      transition: border .15s linear, background .15s linear;
+    }
+  }
+
+  &__tabs-content {
+    border-bottom: 11px solid rgba($purple-200, .5);
+  }
+  &__pane__inner {
+    @include rem(min-height, 124px);
+    @include rem(font-size, 14px);
+    @include rem(padding, 25px 0);
+    border-bottom: 11px solid rgba($emerald-100, .3);
+    margin: 0 auto;
+    color: $gray-600;
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    [class*="__icon"] {
+      flex: 1 0 67px;
+      max-width: 67px;
+      height: 47px;
+      background-position: right center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__icon {
+    &--coffee {
+      background-image: url('../images/icons/coffee-color.svg');
+    }
+    &--user-question {
+      background-image: url('../images/icons/user-question-color.svg');
+    }
+    &--code {
+      background-image: url('../images/icons/code-color.svg');
+    }
+    &--battery {
+      background-image: url('../images/icons/battery-color.svg');
+    }
+    &--terminal {
+      background-image: url('../images/icons/terminal-color.svg');
+    }
+    &--cutlery {
+      background-image: url('../images/icons/cutlery-color.svg');
+    }
+    &--laptop {
+      background-image: url('../images/icons/laptop-color.svg');
+    }
+  }
+
+  &__pane__body {
+    @include rem(min-height, 63px);
+    @include rem(margin-left, 20px);
+    @include rem(padding-left, 20px);
+    display: flex;
+    align-items: center;
+    border-left: 1px solid $gray-500;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+
+  // @media Tablet to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(md) {
+    &__tabs {
+      > .container {
+        width: 1000px;
+        max-width: none;
+      }
+    }
+    &__item:last-child {
+      a, .bootcamp-timeline__tab-label {
+        padding-right: 0;
+      }
+    }
+    &__pane__inner {
+      .container {
+        max-width: span(10);
+      }
+    }
+  }
+
+
+  // @media Desktop to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(lg) {
+    > .container,
+    &__tabs > .container {
+      padding-right: span(.5);
+      padding-left: span(.5);
+    }
+    &__tabs {
+      > .container {
+        width: $grid-container;
+        max-width: 100%;
+      }
+    }
+    &__intro {
+      max-width: span(7);
+    }
+    &__pane__inner {
+      .container {
+        max-width: span(5.5);
+      }
+    }
+  }
+}

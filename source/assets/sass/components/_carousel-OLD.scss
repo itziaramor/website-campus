@@ -1,0 +1,245 @@
+// -----------------------------------------------------------------------------
+// CAROUSEL
+// -----------------------------------------------------------------------------
+
+.carousel {
+
+  $item-width:          213px !default;
+  $item-width-current:  300px !default;
+  $item-height:         535px !default;
+  $item-image-width:   366px !default;
+
+  @keyframes currentCarouselItem {
+    from { opacity: 0 }
+    to { opacity: 1 }
+  }
+
+  position: relative;
+  min-height: 680px;
+  overflow: hidden;
+
+
+  &--diagonal {
+    background-color: $emerald-100;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      left: 0;
+      z-index: 10;
+      background-color: $white;
+      transform: $skewY-base-clockwise;
+    }
+    &::before {
+      top: -395px;
+      height: 555px;
+    }
+    &::after {
+      bottom: -160px;
+      height: 395px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    height: 615px;
+    margin-top: -33px;
+  }
+
+  &__item__inner {
+    overflow: hidden;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      border-radius: 65px 46px;
+      background-color: $white;
+      box-shadow: 0 13px 18px rgba($black, .17);
+      transform: $skewY-base-clockwise;
+    }
+  }
+
+  &__item {
+    flex: 1 0 $item-width;
+    position: relative;
+    max-width: $item-width;
+    &:not(:nth-child(3))::before {
+      content: "";
+      position: absolute;
+      top: 26px;
+      right: 0;
+      left: 0;
+      z-index: 20;
+      height: 8px;
+      background-color: $green-100;
+      transform: $skewY-base-clockwise;
+    }
+    &:nth-child(4),
+    &:nth-child(5) {
+      &::before {
+        top: auto;
+      }
+    }
+    &:nth-child(4)::before {
+      bottom: 76px;
+    }
+    &:nth-child(5)::before {
+      bottom: 23px;
+    }
+
+    img {
+      transform: translateX(calc((#{$item-width} - #{$item-image-width}) / 2));
+    }
+
+    &.current {
+      .carousel__item__inner {
+        @include rem(height, $item-height);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 200;
+        flex-basis: $item-width-current;
+        max-width: $item-width-current;
+        overflow: visible;
+        transform: translate3d(calc((-#{$item-width-current} + #{$item-width}) / 2), -75px, 0);
+        animation: currentCarouselItem .35s linear;
+        &::before {
+          content: "";
+        }
+        img {
+          transform: $skewY-base translate3d(calc((#{$item-width-current} - #{$item-image-width}) / 2), -80px, 0);
+        }
+      }
+    }
+  }
+
+  // 5 items
+  @for $i from 1 through 5 {
+    &__item:nth-child(#{$i}) {
+      .carousel--diagonal--5-items & {
+        margin-top: (48px * $i) * 1.105;
+      }
+    }
+  }
+
+  &__image {
+    .current & {
+      position: relative;
+      border-top-right-radius: 46px;
+      border-top-left-radius: 65px;
+      transform: $skewY-base-clockwise;
+      overflow: hidden;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        right: 0;
+        left: 0;
+        z-index: 40;
+        height: 100px;
+        background-color: $white;
+      }
+    }
+  }
+
+  &__name,
+  &__quote {
+    padding: 0 35px;
+    .current & {
+      position: relative;
+      z-index: 20;
+    }
+  }
+
+  &__name {
+    @include rem(margin-top, -80px);
+    @include rem(font-size, 18px);
+    color: $purple-200;
+    font-weight: 400;
+  }
+
+  &__career,
+  &__quote {
+    @include rem(font-size, 12px);
+  }
+
+  &__career {
+    display: block;
+    color: $green-200;
+    font-weight: 600;
+  }
+
+  &__quote {
+    line-height: 1.6;
+  }
+
+
+  // @media Destkop Full HD to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(xl) {
+    &--diagonal {
+      &::after {
+        bottom: -360px;
+        height: 595px;
+      }
+    }
+  }
+
+
+  // Teachers
+  // -----------------------------------------------------------------------------
+  &--teachers {
+    $item-image-width: 223px;
+
+    min-height: 0;
+    background-color: transparent;
+    &::before,
+    &::after {
+      display: none;
+    }
+    .carousel__inner {
+      @include rem(height, 580px);
+      margin-top: 133px;
+    }
+    .carousel__item {
+      @include rem(flex, 1 0 $item-image-width);
+      @include rem(max-width, $item-image-width);
+      &::before {
+        display: none;
+      }
+      &__inner {
+        overflow: initial;
+      }
+      &:not(.current) {
+        .carousel__image {
+          position: relative;
+          height: 300px;
+          border-radius: 46px 25px;
+          transform: $skewY-base-clockwise;
+          overflow: hidden;
+          img {
+            transform: $skewY-base translate3d(calc((#{$item-width-current} - #{$item-image-width} * 2) / 2), -40px, 0);
+          }
+        }
+        .carousel__name,
+        .carousel__quote {
+          display: none;
+        }
+      }
+      &.current .carousel__item__inner {
+        transform: translate3d(-50%, -75px, 0);
+      }
+    }
+
+    // @media Tablet to up
+    @include media-breakpoint-up(md) {
+      overflow: initial;
+    }
+  }
+
+}

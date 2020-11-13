@@ -1,0 +1,195 @@
+// -----------------------------------------------------------------------------
+// BUTTONS
+// -----------------------------------------------------------------------------
+
+button {
+  background: transparent;
+  border-color: transparent;
+}
+
+// Base styles
+// -----------------------------------------------------------------------------
+.btn {
+  @include transition($btn-transition);
+  display: inline-block;
+  border: $btn-border-width solid transparent;
+  border-radius: $btn-border-radius;
+  padding: $btn-padding-y $btn-padding-x;
+  font-size: $btn-font-size;
+  font-weight: $btn-font-weight;
+  line-height: $btn-line-height;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+
+  // Share hover and focus styles
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: $btn-focus-box-shadow;
+  }
+
+  &:active {
+    outline: 0;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    box-shadow: none;
+    opacity: $btn-disabled-opacity;
+  }
+
+  // Opinionated: add "hand" cursor to non-disabled .btn elements
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    // @include box-shadow($btn-active-box-shadow);
+
+    &:focus {
+      // @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+    }
+  }
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+
+// Size
+// -----------------------------------------------------------------------------
+.btn--lg {
+  @include rem(padding, 8px 30.5px);
+  @include rem(font-size, 24px);
+}
+
+.btn--sm {
+  @include rem(padding, 8px 30.5px);
+  font-size: $font-size-base;
+}
+
+.btn--xs {
+  @include rem(padding, 8px 35px);
+  @include rem(font-size, 14px);
+}
+
+
+// Alternate buttons
+// -----------------------------------------------------------------------------
+.btn--primary {
+  border-color: $green-100;
+  color: $green-100;
+}
+
+.btn--primary-200 {
+  border-color: $green-200;
+  color: $green-200;
+}
+
+.btn--secondary {
+  border-color: $purple-200;
+  color: $purple-200;
+}
+
+
+.btn--inverse {
+  border-color: $white;
+  color: $white;
+}
+.btn--inverse-primary-200 {
+  border-color: $green-200;
+  background-color: $green-200;
+  color: $white;
+}
+
+.btn--link {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  background-color: transparent;
+  color: $link-color;
+  font-size: $font-size-base;
+  font-weight: 300;
+  // font-weight: $font-weight-base;
+}
+
+.btn--slider {
+  border-color: $blue-300;
+  color: $blue-300;
+  background: $white;
+
+  &:hover {
+    background-color: $white !important;
+  }
+}
+
+
+// @media Desktop to up
+@include media-breakpoint-up(sm) {
+  .btn {
+    white-space: nowrap;
+  }
+}
+  
+// @media Desktop to up
+@include media-breakpoint-up(sm) {
+  .btn {
+    white-space: nowrap;
+  }
+}
+
+// @media Desktop to up
+@include media-breakpoint-up(lg) {
+  .btn {
+    @include hover-focus {
+      background-color: rgba($white, .08);
+      text-decoration: none;
+    }
+    &--primary {
+      @include hover-focus {
+        background-color: rgba($green-100, .2);
+        color: $green-100;
+      }
+    }
+    &--primary-200 {
+      @include hover-focus {
+        background-color: rgba($green-200, .1);
+        color: $green-200;
+      }
+    }
+    &--secondary {
+      @include hover-focus {
+        background-color: rgba($purple-200, .2);
+        color: $purple-200;
+      }
+    }
+    &--inverse {
+      @include hover-focus {
+        background-color: rgba($white, .2);
+        color: $white;
+      }
+    }
+    &--inverse-primary-200 {
+      @include hover-focus {
+        border-color: $purple-200;
+        background-color: $purple-200;
+      }
+    }
+    &--link {
+      @include hover-focus {
+        color: $link-hover-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,179 @@
+// -----------------------------------------------------------------------------
+// VARIABLES
+// -----------------------------------------------------------------------------
+
+// Colors system
+// -----------------------------------------------------------------------------
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #ebebeb !default;
+$gray-300: #d6d6d6 !default;
+$gray-400: #c3c3c3 !default;
+$gray-500: #979797 !default;
+$gray-600: #6c757d !default;
+$gray-700: #585858 !default;
+$gray-800: #323232 !default;
+$gray-900: #2b2b2b !default;
+$black: #000 !default;
+
+$blue-100: #20819f !default;
+$blue-200: #206e9f !default;
+$blue-300: #105580 !default;
+$purple-100: #b038d4 !default;
+$purple-200: #8c40a3 !default;
+$green-100: #9de7ac !default;
+$green-200: #5db250 !default;
+$green-300: #37842b !default;
+$emerald-100: #73c3b2 !default;
+$emerald-200: #6a8f88 !default;
+$emerald-300: #2b7f6d !default;
+
+$error: #ff7b7b !default;
+
+// Body
+// -----------------------------------------------------------------------------
+$body-bg: $white !default;
+$body-color: $gray-800 !default;
+
+// Spacing
+// -----------------------------------------------------------------------------
+$spacer: 1rem !default;
+
+// Links
+// -----------------------------------------------------------------------------
+$link-color: #006caf !default;
+$link-decoration: none !default;
+$link-hover-color: darken($link-color, 15%) !default;
+$link-hover-decoration: none !default;
+$link-color-secondary: $purple-200 !default;
+
+// Fonts
+// -----------------------------------------------------------------------------
+$font-family-sans-serif: 'Encode Sans', 'Helvetica Neue', Arial, sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+$font-family-monospace: Menlo, Monaco, Consolas, 'Liberation Mono',
+  'Courier New', monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+
+$font-size-base: 1rem !default; // 16px
+$font-weight-base: 100 !default;
+$font-weight-extralight: 200 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-bold: 600 !default;
+$line-height-base: 1.9 !default;
+
+$h1-font-size: 2rem !default; // 32px
+$h2-font-size: 1.5rem !default; // 26px
+$h3-font-size: 1.525rem !default; // 24px
+$h4-font-size: 1.125rem !default; // 18px
+$h5-font-size: 1rem !default; // 16px
+$h6-font-size: 0.75rem !default; // 12px
+
+$headings-margin-bottom: ($spacer / 2) !default;
+$headings-font-family: inherit !default;
+$headings-font-weight: 100 !default;
+$headings-line-height: 1.2 !default;
+$headings-color: inherit !default;
+
+$paragraph-margin-bottom: 1rem !default;
+$text-muted: $gray-600 !default;
+$small-font-size: 80% !default;
+$mark-padding: 0.2em !default;
+$mark-bg: #fcf8e3 !default;
+
+// Grid breakpoints
+// -----------------------------------------------------------------------------
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1250px,
+  xxl: 1400px,
+) !default;
+
+@include _assert-ascending($grid-breakpoints, '$grid-breakpoints');
+@include _assert-starts-at-zero($grid-breakpoints);
+
+$grid-container: 1280px;
+$grid-gutter: 10px;
+$grid-gutter-sm: 14px;
+$grid-gutter-md: 28px;
+
+// List
+// -----------------------------------------------------------------------------
+$dt-font-weight: $font-weight-bold !default;
+
+// Table
+// -----------------------------------------------------------------------------
+$table-cell-padding: 0.75rem !default;
+$table-caption-color: $text-muted !default;
+
+// Forms
+// -----------------------------------------------------------------------------
+$label-margin-bottom: 0.5rem !default;
+
+// Transitions
+// -----------------------------------------------------------------------------
+$transition-base: all 0.2s ease-in-out !default;
+$transition-fade: opacity 0.15s linear !default;
+
+// Buttons
+// -----------------------------------------------------------------------------
+$btn-border-width: 1px !default;
+$btn-border-radius: 100px !default;
+$btn-padding-y: 0.75rem !default;
+$btn-padding-x: 2.392rem !default;
+$btn-font-size: 1.125rem !default;
+$btn-font-weight: 400 !default;
+$btn-line-height: 1.2 !default;
+$btn-focus-box-shadow: none !default;
+$btn-disabled-opacity: 1 !default;
+$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
+
+// Input
+// -----------------------------------------------------------------------------
+$input-border-width: 1px !default;
+$input-border-radius: 7px !default;
+$input-border-color: $gray-300 !default;
+$input-font-size: 1.125rem !default; // 18px
+$input-padding-y: 2px !default;
+$input-padding-x: 10px !default;
+$input-font-color: #778072 !default;
+
+// Checkbox
+// -----------------------------------------------------------------------------
+$chk-border-width: 1px !default;
+$chk-border-radius: 4px !default;
+$chk-border-color: #c7bdbd !default;
+$chk-width: 14px !default;
+$chk-height: 14px !default;
+
+// Label
+// -----------------------------------------------------------------------------
+$label-chk-font-size: 12px !default;
+
+// Skew
+// -----------------------------------------------------------------------------
+$skewY-base: skewY(-14deg) !default;
+$skewY-base-clockwise: skewY(14deg) !default;
+
+// Navbar
+// -----------------------------------------------------------------------------
+$navbar-height-sm: 70px !default;
+$navbar-height: 100px !default;
+
+$navbar-padding-right-sm: 15px;
+$navbar-padding-right-md: 58px;
+
+// Zindex
+// -----------------------------------------------------------------------------
+$zindex-navbar: 1000 !default;
+$zindex-alert: 1020 !default;
+
+// Asparagus
+// -----------------------------------------------------------------------------
+$asparagus-height: 88px !default;

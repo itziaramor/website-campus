@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+// Default Variables
+
+// Slick icon entity codes outputs the following
+// "\2190" outputs ascii character "←"
+// "\2192" outputs ascii character "→"
+// "\2022" outputs ascii character "•"
+
+$slick-loader-path: "../images/" !default;
+$slick-arrow-color: black !default;
+$slick-dot-color: $emerald-100 !default;
+$slick-dot-color-active: $slick-dot-color !default;
+$slick-color-default: $green-100 !default;
+$slick-color-on-hover: $slick-dot-color !default;
+$slick-color-not-active: $slick-color-default !default;
+
+@function slick-image-url($url) {
+    @if function-exists(image-url) {
+        @return image-url($url);
+    }
+    @else {
+        @return url($slick-loader-path + $url);
+    }
+}
+
+
+// Slider
+// -----------------------------------------------------------------------------
+.slick-list {
+    .slick-loading & {
+        background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;
+    }
+}
+
+
+// Arrows
+// -----------------------------------------------------------------------------
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    display: block;
+    line-height: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    padding: 0;
+    border: none;
+    outline: none;
+    &:hover, &:focus {
+        outline: none;
+        background: transparent;
+        color: transparent;
+        &:before {
+            color: $slick-color-on-hover;
+        }
+    }
+    &.slick-disabled:before {
+        color: $slick-color-not-active;
+    }
+    &:before {
+        @include rem(font-size, 35px);
+        position: relative;
+        z-index: 5;
+        font-family: '#{$icomoon-font-family}' !important;
+        line-height: 1;
+        color: $slick-arrow-color;
+        transition: $transition-base;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    &::after {
+        content: "";
+        position: relative;
+        z-index: 2;
+        display: block;
+        width: 35px;
+        height: 35px;
+        border-radius: 50px;
+        margin-top: -35px;
+        background-color: $white;
+    }
+}
+
+.slick-prev {
+    left: 15px;
+    [dir="rtl"] & {
+        left: auto;
+        right: 15px;
+    }
+    &:before {
+        content: $icon-chevron-left-circle; 
+        [dir="rtl"] & {
+            content: $icon-chevron-right-circle; 
+        }
+    }
+}
+
+.slick-next {
+    right: 15px;
+    [dir="rtl"] & {
+        left: 15px;
+        right: auto;
+    }
+    &:before {
+        content: $icon-chevron-right-circle; 
+        [dir="rtl"] & {
+            content: $icon-chevron-left-circle; 
+        }
+    }
+}
+
+
+// Dots
+// -----------------------------------------------------------------------------
+.slick-dots {
+    position: absolute;
+    bottom: -45px;
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    li {
+        position: relative;
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        margin: 0 3px;
+        padding: 0;
+        cursor: pointer;
+        button {
+            border: 0;
+            background: transparent;
+            display: block;
+            height: 20px;
+            width: 20px;
+            outline: none;
+            line-height: 0px;
+            font-size: 0px;
+            color: transparent;
+            padding: 5px;
+            cursor: pointer;
+            &:hover, &:focus {
+                outline: none;
+                &:before {
+                    color: $slick-dot-color;
+                }
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 11px;
+                height: 11px;
+                border-radius: 50px;
+                background-color: $slick-color-not-active;
+                transition: $transition-base;
+            }
+        }
+        &.slick-active button:before {
+            background-color: $slick-dot-color-active;
+        }
+    }
+}
+
+
+// @media Smartphone to down
+// -----------------------------------------------------------------------------
+@include media-breakpoint-down(sm) {
+    .slick-dots {
+        bottom: -25px;
+    }
+}

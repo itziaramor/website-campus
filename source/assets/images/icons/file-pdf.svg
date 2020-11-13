@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="22px" viewBox="0 0 20 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>pdf</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="01-Ficha-bootcamp" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-E-Ficha-Bootcamp" transform="translate(-1197.000000, -868.000000)" fill="#8C40A3" fill-rule="nonzero">
+            <g id="Navegación" transform="translate(1122.000000, 346.000000)">
+                <g id="Group-19" transform="translate(34.000000, 0.000000)">
+                    <g id="Group-35" transform="translate(39.000000, 521.000000)">
+                        <g id="file-office-pdf">
+                            <g id="Line_Icons" transform="translate(2.000000, 1.000000)">
+                                <g id="Group">
+                                    <path d="M3,2 L3,7 L1,7 L1,2 C1,0.898 1.897,0 3,0 L14.414,0 L19,4.586 L19,7 L17,7 L17,6 L13,6 L13,2 L3,2 Z M17,20 L17,19 L19,19 L19,20 C19,21.103 18.103,22 17,22 L3,22 C1.897,22 1,21.103 1,20 L1,19 L3,19 L3,20 L17,20 Z M7,9 L9,9 C11.206,9 13,10.794 13,13 C13,15.206 11.206,17 9,17 L7,17 L7,9 Z M11,13 C11,11.898 10.103,11 9,11 L9,15 C10.103,15 11,14.103 11,13 Z M20,11 L16,11 L16,12 L19,12 L19,14 L16,14 L16,17 L14,17 L14,11 C14,9.898 14.897,9 16,9 L20,9 L20,11 Z M2,15 L2,17 L0,17 L0,9 L3,9 C4.654,9 6,10.346 6,12 C6,13.654 4.654,15 3,15 L2,15 Z M2,11 L2,13 L3,13 C3.551,13 4,12.552 4,12 C4,11.448 3.551,11 3,11 L2,11 Z" id="pdf"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="278px" height="140px" viewBox="0 0 278 140" style="enable-background:new 0 0 278 140;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.433;fill:url(#SVGID_1_);stroke:#FFFFFF;enable-background:new    ;}
+	.st1{fill:url(#SVGID_2_);stroke:#FFFFFF;stroke-width:2;}
+	.st2{opacity:0.201;fill:#68B75C;enable-background:new    ;}
+	.st3{fill:#FFFFFF;}
+	.st4{font-family:'EncodeSans-Medium';}
+	.st5{font-size:20px;}
+	.st6{font-size:12px;}
+	.st7{filter:url(#header-grant-shield-c);}
+	.st8{fill:#68B75C;stroke:#FFFFFF;stroke-width:2;}
+</style>
+<filter  filterUnits="objectBoundingBox" height="139.1%" id="header-grant-shield-c" width="139.1%" x="-19.6%" y="-10.9%">
+	<feMorphology  in="SourceAlpha" operator="dilate" radius="1" result="shadowSpreadOuter1"></feMorphology>
+	<feOffset  dy="4" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+	<feGaussianBlur  in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"></feGaussianBlur>
+	<feComposite  in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+	<feColorMatrix  in="shadowBlurOuter1" values="0 0 0 0 0.725109844   0 0 0 0 0.774598053   0 0 0 0 0.718923818  0 0 0 1 0">
+		</feColorMatrix>
+</filter>
+<g transform="translate(0 -56)">
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-345.5164" y1="378.966" x2="-346.2329" y2="379.2213" gradientTransform="matrix(277 0 0 -164.9836 96048.5 62634.375)">
+		<stop  offset="0" style="stop-color:#F9E3FF"/>
+		<stop  offset="1" style="stop-color:#F1C1FF"/>
+	</linearGradient>
+	<path class="st0" d="M277.5,0.7H0.5v117.9c0,6.6,4.5,12.4,10.9,14l127.6,33l127.6-33c6.4-1.7,10.9-7.4,10.9-14V0.7z"/>
+	
+		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="-345.5156" y1="378.3139" x2="-346.1619" y2="378.7574" gradientTransform="matrix(263 0 0 -144.3074 91183 54725.7227)">
+		<stop  offset="0" style="stop-color:#D4A9DE"/>
+		<stop  offset="1" style="stop-color:#A656BE"/>
+	</linearGradient>
+	<path class="st1" d="M270,11H7v101.8c0,6.5,4.4,12.1,10.7,13.6l120.8,28.9l120.8-28.8c6.3-1.5,10.7-7.1,10.7-13.6V11z"/>
+	<circle class="st2" cx="139" cy="163" r="33"/>
+	<text transform="matrix(1 0 0 1 38.49 95)" class="st3 st4 st5">Becas Bootcamp 2020</text>
+	<text transform="matrix(1 0 0 1 79.817 120.3333)" class="st3 st4 st6">MÁS INFORMACIÓN</text>
+	<g class="st7">
+		<circle id="header-grant-shield-d_2_" cx="139" cy="163" r="23"/>
+	</g>
+	<g>
+		<circle id="header-grant-shield-d_1_" class="st8" cx="139" cy="163" r="23"/>
+	</g>
+	<polygon class="st3" points="131.4,158 139,165.4 146.6,158 149,160.3 139,170 129,160.3 	"/>
+</g>
+</svg>

@@ -1,0 +1,100 @@
+// -----------------------------------------------------------------------------
+// FEE TRAINING
+// -----------------------------------------------------------------------------
+
+.fee-training {
+  @include asparagus(100%);
+  @include rem(margin-bottom, 85px);
+  position: relative;
+
+  .col + .col {
+    @include rem(margin-top, 65px);
+  }
+
+  &__download {
+    display: flex;
+    align-items: center;
+    @include rem(font-size, 14px);
+    [class*="icon"] {
+      @include rem(margin-right, 8px);
+      @include rem(font-size, 24px);
+    }
+  }
+
+
+  // @media Smartphone to down
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-down(sm) {
+    &--sponsor {
+      text-align: center;
+      .col + .col {
+        @include rem(margin-top, 30px);
+      }
+    }
+  }
+
+
+  // @media Tablet to down
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-down(md) {
+    .row {
+      display: block;
+    }
+  }
+
+
+  // @media Tablet to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(md) {
+    &__inner {
+      // padding-right: span(2);
+      // padding-left: span(.5);
+      &.fee-training__inner {
+        // padding-right: span(.5);
+      }
+    }
+  }
+
+
+  // @media Desktop to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(lg) {
+    @include rem(margin-bottom, 130px);
+
+    .row {
+      justify-content: space-between;
+    }
+    .col {
+      &:nth-child(1) {
+        flex-basis: span(5);
+        max-width: span(5);
+      }
+      &:nth-child(2) {
+        flex-basis: span(6);
+        max-width: span(6);
+      }
+      + .col {
+        margin-top: 0;
+      }
+    }
+
+    &--sponsor {
+      .row {
+        align-items: center;
+      }
+      .col:nth-child(1) {
+        max-width: span(6);
+      }
+      .fee-training__heading {
+        color: $purple-200;
+      }
+    }
+
+    &__inner {
+      padding-left: span(.5);
+      padding-right: span(.5);
+    }
+
+  }
+  
+}

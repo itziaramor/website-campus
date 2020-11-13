@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="01-Ficha-bootcamp" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-E-Ficha-Bootcamp" transform="translate(-707.000000, -4110.000000)" fill="#73C3B2" fill-rule="nonzero">
+            <g id="Módulo-6" transform="translate(350.000000, 3827.000000)">
+                <g id="Group-2" transform="translate(250.000000, 221.000000)">
+                    <g id="alarm-clock-copy" transform="translate(107.000000, 62.000000)">
+                        <g id="Line_Icons">
+                            <g id="Group">
+                                <path d="M10.5,20 C4.855725,20 0.2625,15.5696976 0.2625,10.1231803 C0.2625,4.67666293 4.855725,0.246360582 10.5,0.246360582 C16.144275,0.246360582 20.7375,4.67666293 20.7375,10.1231803 C20.7375,15.5696976 16.144275,20 10.5,20 Z M10.5,2.44120941 C6.10925,2.44120941 2.5375,5.88712206 2.5375,10.1231803 C2.5375,14.3592385 6.10925,17.8051512 10.5,17.8051512 C14.89075,17.8051512 18.4625,14.3592385 18.4625,10.1231803 C18.4625,5.88712206 14.89075,2.44120941 10.5,2.44120941 Z M13.1082875,14.1913326 L9.6957875,10.8990594 C9.4819375,10.6927436 9.3625,10.4139978 9.3625,10.1231803 L9.3625,4.63605823 L11.6375,4.63605823 L11.6375,9.66884658 L14.7167125,12.6395745 L13.1082875,14.1913326 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

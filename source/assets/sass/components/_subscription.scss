@@ -1,0 +1,215 @@
+// -----------------------------------------------------------------------------
+// SUBSCRIPTION
+// -----------------------------------------------------------------------------
+
+.icon-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  &.icon-bootcamp {
+    background-image: url('../images/bg-bootcamp-icon.png');
+  }
+  &.icon-angular {
+    background-image: url('../images/training/bg-angular.jpg');
+  }
+  &.icon-docker {
+    background-image: url('../images/training/bg-docker.jpg');
+  }
+  &.icon-nodejs {
+    background-image: url('../images/training/bg-nodejs.jpg');
+  }
+  &.icon-css {
+    background-image: url('../images/training/bg-css.jpg');
+  }
+  &.icon-vue {
+    background-image: url('../images/training/bg-vuejs.jpg');
+  }
+  &.icon-react {
+    background-image: url('../images/training/bg-react.png');
+  }
+  &.icon-javascript {
+    background-image: url('../images/training/bg-javascript.png');
+  }
+}
+.subscription {
+  // Promotions
+  &__page {
+    // Grant
+    // Black friday
+    &--grant,
+    &--black-friday {
+      .image-promotion {
+        display: block;
+        margin: 0 auto;
+      }
+      @include media-breakpoint-up(md) {
+        .image-promotion {
+          position: fixed;
+          top: 0;
+          left: 50%;
+          z-index: 1000;
+          transform: translateX(-50%);
+        }
+        .subscription__header__inner {
+          margin-top: 4rem;
+        }
+      }
+      .subscription__form__response {
+        margin-top: 2.5rem;
+
+        @include media-breakpoint-up(md) {
+          margin-top: 5rem;
+        }
+      }
+    }
+  }
+
+  &__header__inner {
+    padding-top: rem(30px);
+    padding-bottom: rem(24px);
+    text-align: center;
+
+    [class*='icon-'] {
+      @include rem(width, 54px);
+      @include rem(height, 54px);
+      @include rem(font-size, 22px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      border-radius: 50%;
+      background-color: $white;
+      color: $white;
+      @include rem(margin-bottom, 16px);
+    }
+  }
+
+  &__heading {
+    margin-bottom: 0;
+    small {
+      @include rem(margin-top, 8px);
+      @include rem(font-size, 18px);
+      display: block;
+      color: $green-200;
+      font-weight: 400;
+    }
+  }
+  &__subheading {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: $purple-200;
+  }
+  &__edition {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: $green-200;
+  }
+  &__text {
+    padding: 0 0.75rem;
+    margin-bottom: 1rem;
+
+    span {
+      color: $purple-200;
+    }
+  }
+  &__form__wrapper {
+    margin: auto;
+    @include asparagus(60%);
+    @include rem(margin-bottom, 88px);
+
+    .form-btn {
+      .spinner {
+        min-width: rem(214px);
+      }
+    }
+  }
+
+  &__form__response {
+    position: relative;
+    text-align: center;
+    @include asparagus(70%);
+    @include rem(margin-bottom, 88px);
+
+    &--margin {
+      margin-top: rem(100px);
+    }
+  }
+
+  &__text_response {
+    color: $purple-200;
+  }
+
+  &__contact {
+    margin: auto;
+    @include rem(margin-bottom, 32px);
+
+    a {
+      color: $purple-200;
+    }
+  }
+
+  &__form__legal {
+    .form-group {
+      + .form-group {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  // @media Tablet to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(md) {
+    &__header__inner {
+      [class*='icon-'] {
+        @include rem(width, 90px);
+        @include rem(height, 90px);
+        @include rem(font-size, 35px);
+        @include rem(margin-bottom, 24px);
+      }
+    }
+    &__heading {
+      @include rem(font-size, 36px);
+      small {
+        @include rem(font-size, 24px);
+        font-weight: $headings-font-weight;
+      }
+    }
+    &__subheading {
+      margin-top: 4rem;
+      margin-bottom: 1rem;
+    }
+    &__text {
+      margin-bottom: 3rem;
+
+      span {
+        display: block;
+      }
+    }
+    &__form__wrapper,
+    &__contact {
+      max-width: span(6);
+    }
+  }
+
+  // @media Desktop Full HD to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(xl) {
+    &__header__inner {
+      @include rem(padding-bottom, 16px);
+    }
+    &__heading {
+      @include rem(margin-bottom, 10px);
+    }
+    &__form__wrapper {
+      @include rem(margin-left, 200px);
+    }
+    &__form__legal {
+      @include rem(max-width, 358px);
+      margin-right: 0;
+      margin-left: auto;
+      @include rem(margin-top, 10px);
+    }
+    &__contact {
+      max-width: span(5);
+    }
+  }
+}

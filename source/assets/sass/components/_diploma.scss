@@ -1,0 +1,162 @@
+// Quito margen de página
+@page {
+    margin: 0;
+    size: A4;
+}
+
+
+@media print {
+    .diploma {
+        width: 210mm;
+        height: 297mm;
+    }
+}
+
+
+.diploma {
+    text-align: center;
+    position: relative;
+    @include rem(padding, 36px);
+    // background: url('../images/bg-diploma.png') no-repeat;
+
+    [class^="icon-"], [class*=" icon-"] {
+        @include rem(font-size, 36px);
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 100%;
+    }
+
+    &__inner {
+        // background: rgba($white, .95);
+        @include rem(padding-left, 33px);
+        @include rem(padding-right, 33px);
+    }
+
+    &__logos {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 11.5rem;
+        // @include rem(padding-bottom, 118px);
+    }
+
+    &__title {
+        @include rem(font-size, 42px);
+        font-weight: $font-weight-bold;
+    }
+
+    &__description {
+        @include rem(font-size, 14px);
+        @include rem(line-height, 28px);
+        padding: 0 3rem;
+
+        &.-uppercase {
+            text-transform: uppercase;
+        }
+    }
+
+    &__student {
+        @include rem(font-size, 32px);
+        color: $blue-300;
+        font-weight: $font-weight-normal;
+        @include rem(margin-top, 56px);
+        @include rem(margin-bottom, 12px);
+    }
+
+    &__center {
+        @include rem(max-width, 550px);
+        margin: auto;
+    }
+
+    &__grade {
+        @include rem(font-size, 24px);
+        @include rem(line-height, 32px);
+        color: $black;
+        font-weight: $font-weight-bold;
+        @include rem(margin-top, 72px);
+        @include rem(margin-bottom, 80px);
+        @include rem(max-width, 300px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__signatures {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include rem(margin-top, 56px);
+        padding: 0 2rem;
+    }
+
+    &__date {
+        @include rem(font-size, 14px);
+    }
+
+    &__img100 {
+        width: 100%;
+    }
+
+    &__title-temario {
+        padding: 3rem 0 6rem;
+        p {
+            margin: 0;
+        }
+    }
+
+    &__temario {
+        @include rem(max-width, 350px);
+        margin: 0 auto;
+        @include rem(font-size, 12px);
+    }
+
+    &__logo-campus {
+        @include rem(max-width, 121px);
+    }
+
+    &__logo-boream {
+        @include rem(max-width, 74px);
+    }
+}
+
+.signature {
+    @include rem(width, 180px);
+
+    img {
+        @include rem(height, 50px);
+        width: auto;
+    }
+
+    &__name {
+        @include rem(font-size, 12px);
+        color: $black;
+        margin: 0;
+        @include rem(margin-top, 8px);
+        @include rem(padding-top, 4px);
+        border-top: 1px solid $gray-500;
+    }
+    &__position {
+        text-transform: uppercase;
+        @include rem(font-size, 9px);
+        color: $black;
+        line-height: 1;
+    }
+}
+
+.temario {
+    &__topic {
+        text-align: left;
+    }
+    &__title {
+        margin-bottom: 0;
+        font-weight: $font-weight-bold;
+    }
+    
+}

@@ -1,0 +1,110 @@
+// -----------------------------------------------------------------------------
+// Name: Campus Boream
+// Version: 1
+// Copyright 2018 Boream Digital SL
+// -----------------------------------------------------------------------------
+
+// FRAMEWORKS
+// -----------------------------------------------------------------------------
+@import 'susy';
+
+// PARTIALS
+// -----------------------------------------------------------------------------
+@import 'partials/functions';
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/grid';
+@import 'partials/reboot';
+@import 'partials/font';
+@import 'partials/transitions';
+
+// ICOMOON ICONS
+// -----------------------------------------------------------------------------
+$icomoon-font-path: '../fonts/campusboream/fonts' !default;
+@import '../fonts/campusboream/style.scss';
+
+// GLOBALS
+// -----------------------------------------------------------------------------
+@import 'global/type';
+@import 'global/buttons';
+@import 'global/scroll-animation';
+@import 'global/site-heading';
+@import 'global/list-group';
+@import 'global/animated-gradient';
+@import 'global/tabs';
+@import 'global/accordion';
+@import 'global/utilities';
+@import 'global/slick';
+@import 'global/slick-theme';
+@import 'global/form';
+@import 'global/skills';
+@import 'global/alert';
+@import 'global/cookies-consent';
+@import 'global/spinner';
+
+// COMPONENTES
+// -----------------------------------------------------------------------------
+@import 'components/navbar';
+@import 'components/training-card';
+@import 'components/working-in';
+@import 'components/cb-numbers';
+@import 'components/testimonials';
+@import 'components/solidary';
+@import 'components/data-sheet-metainfo';
+@import 'components/tab-training';
+@import 'components/training-syllabus';
+@import 'components/training-teachers';
+@import 'components/career-support';
+@import 'components/next-calls';
+@import 'components/other-training';
+@import 'components/fee-training';
+@import 'components/cb-faqs';
+@import 'components/slider';
+@import 'components/site-footer';
+
+@import 'components/diploma';
+@import 'components/modal';
+
+// PROMOTIONS
+// -----------------------------------------------------------------------------
+@import 'components/promotions/grant';
+
+// PAGE
+// -----------------------------------------------------------------------------
+@import 'components/page';
+
+// HOME
+// -----------------------------------------------------------------------------
+@import 'components/home-header';
+@import 'components/home-bootcamp';
+@import 'components/home-training';
+
+// BOOTCAMP SHEET
+// -----------------------------------------------------------------------------
+@import 'components/bootcamp-sheet-header';
+@import 'components/bootcamp-sheet-details';
+@import 'components/bootcamp-timeline';
+
+// INCOMPANY
+// -----------------------------------------------------------------------------
+@import 'components/incompany';
+
+// CONTACT & SUBCRIPTION
+// -----------------------------------------------------------------------------
+@import 'components/subscription';
+@import 'components/contact';
+
+// CAMPAIGN TEMPLATE
+// -----------------------------------------------------------------------------
+@import 'components/campaign-header';
+@import 'components/campaign-employability';
+@import 'components/campaign-support';
+@import 'components/campaign-offer';
+@import 'components/campaign-info';
+@import 'components/campaign-testimony';
+@import 'components/campaign-companies';
+@import 'components/campaign-learn';
+@import 'components/campaign-followme';
+@import 'components/campaign';
+@import 'components/footer-campaign';
+

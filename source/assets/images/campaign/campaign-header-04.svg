@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Artboard Copy 5</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard-Copy-5" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-27">
+            <g id="Group-21">
+                <rect id="Rectangle-path-Copy-3" x="0" y="0" width="32" height="32"></rect>
+                <g id="Line_Icons" transform="translate(5.000000, 2.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <g id="Group">
+                        <path d="M11,18.7 C10.5688,18.7 10.1772,18.4481 9.999,18.0554 C9.2477,16.4043 5.5,8.0399 5.5,5.5 C5.5,2.4673 7.9673,0 11,0 C14.0327,0 16.5,2.4673 16.5,5.5 C16.5,8.0399 12.7534,16.4043 12.001,18.0554 C11.8228,18.4481 11.4323,18.7 11,18.7 Z M11,2.2 C9.1806,2.2 7.7,3.6806 7.7,5.5 C7.7,6.8013 9.4523,11.2871 11,14.8797 C12.5488,11.286 14.3,6.8002 14.3,5.5 C14.3,3.6806 12.8194,2.2 11,2.2 Z" id="Shape"></path>
+                        <circle id="Oval" cx="11" cy="5.5" r="1.65"></circle>
+                        <path d="M19.2313,22 L2.7687,22 C2.0284,22 1.3431,21.6315 0.9328,21.0122 C0.5225,20.3896 0.4543,19.613 0.748,18.9321 L3.1042,13.4332 C3.4496,12.6236 4.2427,12.1 5.1249,12.1 L6.0313,12.1 L6.0313,14.3 L5.1249,14.3 L2.7676,19.8 L19.2313,19.8 L16.874,14.3 L15.9313,14.3 L15.9313,12.1 L16.874,12.1 C17.7562,12.1 18.5493,12.6236 18.8958,13.4343 L21.252,18.9332 C21.5446,19.6119 21.4764,20.3896 21.0672,21.01 C20.658,21.6315 19.9716,22 19.2313,22 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

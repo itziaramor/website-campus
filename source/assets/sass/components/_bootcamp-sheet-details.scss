@@ -1,0 +1,447 @@
+// -----------------------------------------------------------------------------
+// BOOTCAMP SHEET: DETAILS
+// -----------------------------------------------------------------------------
+
+.bootcamp-sheet {
+  &__details {
+    position: relative;
+    z-index: 21;
+
+    .suggested-training {
+      @include rem(margin, 0 auto);
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      .underline {
+        @include underline-heading();
+      }
+    }
+  }
+
+  &__lead {
+    @include rem(margin-bottom, 60px);
+    @include rem(font-size, 24px);
+    line-height: 1.5;
+    font-weight: $font-weight-base;
+    &--sm {
+      // @include rem(margin-bottom, 45px);
+      @include rem(margin-bottom, 16px);
+      @include rem(font-size, 24px);
+      line-height: 1.5;
+      font-weight: $font-weight-base;
+    }
+  }
+
+  &__details__intro {
+    @include rem(margin-bottom, 65px);
+  }
+
+  &__details__features {
+    @include rem(margin-bottom, 110px);
+    color: $white;
+    &__inner {
+      @include rem(margin-bottom, 50px);
+      @include rem(padding-top, 65px);
+      background: url('../images/bg-bootcamp-why-sm.jpg') center -85px no-repeat;
+      background-size: cover;
+      .container {
+        padding-left: span(0.5);
+      }
+    }
+    .col {
+      [class*='site-heading'] {
+        color: $green-100;
+      }
+      + .col {
+        @include rem(margin-top, 40px);
+      }
+    }
+    .site-heading--h4 {
+      [class*='icon'] {
+        @include rem(margin-bottom, 8px);
+        @include rem(font-size, 35px);
+        display: block;
+      }
+    }
+  }
+
+  &__details__companies {
+    @include asparagus();
+    position: relative;
+    color: $body-color;
+    text-align: center;
+    .site-heading--h4 {
+      @include underline-heading;
+    }
+  }
+
+  &__highlight {
+    @include rem(margin-top, 80px);
+    @include rem(padding, 55px 0);
+    border-top: 1px solid $white;
+    background-color: $emerald-100;
+    [class*='site-heading'] {
+      color: $white;
+    }
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__details__logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding-left: 0;
+    list-style: none;
+    li {
+      // @include rem(flex, 1 0 140px);
+      // @include rem(max-width, 140px);
+    }
+    img {
+      @include img-fluid();
+      margin: auto;
+      @include rem(max-width, 140px);
+    }
+  }
+
+  &__details__goals {
+    @include asparagus(130%);
+    @include rem(margin-bottom, 50px);
+    position: relative;
+    strong {
+      font-weight: 100;
+    }
+  }
+
+  &__details__goals__list {
+    @include rem(margin-bottom, 70px);
+    @include rem(padding-top, 57px);
+    @include rem(padding-bottom, 57px);
+    border-bottom: 19px solid rgba(#9de7ac, 0.95);
+    background-color: $emerald-100;
+    color: $white;
+    overflow-x: auto;
+    .goals__list {
+      display: flex;
+      margin-bottom: 0;
+      padding-left: 0;
+      list-style: none;
+      counter-reset: goal-counter;
+    }
+    .goals__item {
+      @include rem(flex, 1 0 195px);
+      @include rem(max-width, 195px);
+      @include rem(font-size, 36px);
+      display: flex;
+      justify-content: space-between;
+      line-height: 1.6;
+      &:not(:first-child) {
+        @include rem(margin-left, 40px);
+      }
+      &::before {
+        @include rem(margin-right, 13px);
+        content: counter(goal-counter);
+        counter-increment: goal-counter;
+        width: 38px;
+        line-height: 1;
+      }
+      > span {
+        @include rem(padding, 0 10px 8px 13px);
+        @include rem(font-size, 18px);
+        display: block;
+        border-left: 1px solid $white;
+      }
+    }
+  }
+
+  &__details__skeleton {
+    @include rem(max-width, 741px);
+    position: relative;
+    z-index: 10;
+    margin: 0 auto;
+    text-align: center;
+    .site-heading--h2 + .site-heading--h3 {
+      @include underline-heading();
+    }
+  }
+
+  // @media Smartphone to down
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-down(sm) {
+    &__details {
+      .bootcamp-sheet__lead {
+        display: none;
+      }
+    }
+    &__details__brands {
+      position: relative;
+      border-top: 1px solid #e1e1e1;
+      border-bottom: 1px solid #e1e1e1;
+      margin: 35px $grid-gutter-sm 0;
+      padding: 18px 0 25px;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+      }
+      &::before {
+        @include rem(font-size, 24px);
+        content: $icon-swipe-gesture;
+        bottom: -13px;
+        left: calc(50% - 12px);
+        z-index: 5;
+        color: #e1e1e1;
+        font-family: '#{$icomoon-font-family}' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      &::after {
+        bottom: -20px;
+        left: calc(50% - 20px);
+        z-index: 2;
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+      }
+    }
+    &__details__logos {
+      position: relative;
+      // justify-content: flex-start;
+      // max-width: 150px;
+      // overflow-x: auto;
+      &::before {
+        top: 0;
+      }
+      &::after {
+        bottom: 0;
+      }
+      li:nth-child(2) {
+        margin: 0 30px;
+      }
+    }
+    &__details__skeleton {
+      p br {
+        display: none;
+      }
+    }
+  }
+
+  // @media Tablet to down
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-down(md) {
+    &__details__features {
+      .col {
+        flex: 1 0 0;
+      }
+    }
+    &__details__companies {
+      > .container {
+        max-width: span(11);
+      }
+    }
+    &__details__logos {
+      li {
+        &:not(:last-of-type)::after {
+          @include rem(margin-right, 26px);
+          @include rem(margin-left, 26px);
+        }
+        &:nth-child(2) {
+          img {
+            max-width: 132px;
+          }
+        }
+      }
+    }
+    &__highlight {
+      @include rem(margin-top, 50px);
+    }
+  }
+
+  // @media Tablet only
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-only(md) {
+    &__details__goals__list {
+      padding-top: 0;
+      overflow: initial;
+      .goals__list {
+        flex-wrap: wrap;
+      }
+      .goals__item {
+        @include rem(margin-top, 57px);
+        @include rem(padding-right, 20px);
+        flex: 1 0 (100% / 3);
+        max-width: (100% / 3);
+        margin-left: 0 !important;
+      }
+    }
+  }
+
+  // @media Tablet to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(md) {
+    &__details {
+      .suggested-training {
+        max-width: span(10);
+      }
+    }
+    &__details__intro {
+      max-width: span(10.5);
+    }
+    &__details__features {
+      &__inner {
+        @include rem(margin-bottom, 118px);
+        background-image: url('../images/bg-bootcamp-why.jpg');
+        background-position: 65% top;
+        background-size: initial;
+      }
+      .col {
+        flex: 1 0 0;
+        [class*='site-heading'] {
+          @include rem(min-height, 56px);
+        }
+        + .col {
+          margin-top: 0;
+        }
+      }
+    }
+    &__details__logos {
+      @include rem(margin-top, 50px);
+      max-width: span(8);
+      li {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        max-width: none;
+        &:not(:last-of-type)::after {
+          @include rem(margin-right, 30px);
+          @include rem(margin-left, 30px);
+          content: '';
+          display: inline-block;
+          height: 120px;
+          border-right: 1px solid $gray-500;
+        }
+      }
+      img {
+        max-width: initial;
+      }
+    }
+    &__highlight {
+      background-color: rgba($emerald-100, 0.9);
+    }
+  }
+
+  // @media Desktop to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(lg) {
+    &__details {
+      .suggested-training {
+        max-width: span(8);
+      }
+    }
+    &__lead {
+      @include rem(margin-bottom, 60px);
+      @include rem(font-size, 32px);
+    }
+    &__details__intro {
+      max-width: span(8);
+      padding-left: span(0.5);
+    }
+    &__details__features {
+      &__inner {
+        background-position: 0 0;
+        background-size: 100% 100%;
+      }
+      .col {
+        flex-basis: span(4);
+        max-width: span(4);
+      }
+    }
+    &__details__companies {
+      > .container {
+        max-width: span(6);
+      }
+    }
+    &__details__logos {
+      @include rem(max-width, 750px);
+      @include rem(margin-top, 80px);
+      li {
+        &:not(:last-of-type)::after {
+          @include rem(margin-right, 40px);
+          @include rem(margin-left, 40px);
+        }
+        &:nth-child(2) {
+          img {
+            max-width: none;
+          }
+        }
+      }
+    }
+    &__highlight {
+      @include rem(margin-top, 50px);
+      &__inner {
+        max-width: span(8);
+      }
+    }
+    &__details__goals {
+      &__inner {
+        max-width: span(10);
+        padding-left: span(0.5);
+      }
+    }
+    &__details__goals__list {
+      .goals__list {
+        padding: 0 span(0.5);
+      }
+    }
+  }
+
+  // @media Desktop Full HD to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(xl) {
+    &__details {
+      // margin-top: -250px;
+      // margin-top: -200px;
+      .suggested-training {
+        max-width: span(6);
+      }
+      > .container {
+        // padding-left: span(.5);
+      }
+    }
+  }
+}
+
+.Bootcamp {
+  .campaign-employability {
+    padding-bottom: 3rem;
+
+    p {
+      font-weight: 300;
+      line-height: 1.9;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .campaign-employability__description {
+      padding-left: span(0.5);
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .campaign-employability {
+      margin-top: -200px;
+      position: relative;
+      z-index: 21;
+    }
+  }
+}

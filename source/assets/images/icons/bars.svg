@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="19px" viewBox="0 0 25 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="01-Ficha-bootcamp" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-T-Ficha-Bootcamp" transform="translate(-715.000000, -41.000000)" fill="#404241" fill-rule="nonzero">
+            <g id="Group-52">
+                <g id="Group-34" transform="translate(715.000000, 41.000000)">
+                    <path d="M1.5,2.5 C0.94771525,2.5 0.5,2.05228475 0.5,1.5 C0.5,0.94771525 0.94771525,0.5 1.5,0.5 L23.5227155,0.5 C24.0750003,0.5 24.5227155,0.94771525 24.5227155,1.5 C24.5227155,2.05228475 24.0750003,2.5 23.5227155,2.5 L1.5,2.5 Z M1.5,10.5 C0.94771525,10.5 0.5,10.0522847 0.5,9.5 C0.5,8.94771525 0.94771525,8.5 1.5,8.5 L23.5227155,8.5 C24.0750003,8.5 24.5227155,8.94771525 24.5227155,9.5 C24.5227155,10.0522847 24.0750003,10.5 23.5227155,10.5 L1.5,10.5 Z M1.5,18.5 C0.94771525,18.5 0.5,18.0522847 0.5,17.5 C0.5,16.9477153 0.94771525,16.5 1.5,16.5 L23.5227155,16.5 C24.0750003,16.5 24.5227155,16.9477153 24.5227155,17.5 C24.5227155,18.0522847 24.0750003,18.5 23.5227155,18.5 L1.5,18.5 Z" id="Combined-Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,265 @@
+@font-face {
+  font-family: 'campusboream';
+  src:
+    url('fonts/campusboream.ttf?ba1q56') format('truetype'),
+    url('fonts/campusboream.woff?ba1q56') format('woff'),
+    url('fonts/campusboream.svg?ba1q56#campusboream') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'campusboream' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-hundred:before {
+  content: "\e950";
+}
+.icon-koa:before {
+  content: "\e94b";
+}
+.icon-travis:before {
+  content: "\e94c";
+}
+.icon-sass:before {
+  content: "\e94a";
+}
+.icon-apirestful:before {
+  content: "\e943";
+}
+.icon-atomic-design:before {
+  content: "\e944";
+}
+.icon-chrome-tools:before {
+  content: "\e945";
+}
+.icon-expressjs:before {
+  content: "\e946";
+}
+.icon-heroku:before {
+  content: "\e947";
+}
+.icon-mongodb:before {
+  content: "\e948";
+}
+.icon-angular:before {
+  content: "\e900";
+}
+.icon-bootcamp:before {
+  content: "\e90b";
+}
+.icon-bootcamp-circle:before {
+  content: "\e901";
+}
+.icon-react:before {
+  content: "\e92b";
+}
+.icon-vue:before {
+  content: "\e937";
+}
+.icon-docker:before {
+  content: "\e936";
+}
+.icon-accessibilty:before {
+  content: "\e924";
+}
+.icon-css:before {
+  content: "\e925";
+}
+.icon-git:before {
+  content: "\e926";
+}
+.icon-html5:before {
+  content: "\e927";
+}
+.icon-javascript:before {
+  content: "\e928";
+}
+.icon-nodejs:before {
+  content: "\e929";
+}
+.icon-polymer:before {
+  content: "\e92a";
+}
+.icon-es6:before {
+  content: "\e93e";
+}
+.icon-gulp:before {
+  content: "\e93f";
+}
+.icon-ngrx:before {
+  content: "\e940";
+}
+.icon-redux:before {
+  content: "\e941";
+}
+.icon-typescript:before {
+  content: "\e942";
+}
+.icon-help:before {
+  content: "\e94e";
+  color: #585858;
+}
+.icon-requirements:before {
+  content: "\e94f";
+  color: #585858;
+}
+.icon-pencil-clock:before {
+  content: "\e93d";
+}
+.icon-check:before {
+  content: "\e939";
+}
+.icon-envelope:before {
+  content: "\e93a";
+}
+.icon-envelope-tick:before {
+  content: "\e94d";
+}
+.icon-phone-office:before {
+  content: "\e93b";
+}
+.icon-building:before {
+  content: "\e93c";
+}
+.icon-monitor:before {
+  content: "\e92f";
+}
+.icon-folder:before {
+  content: "\e930";
+}
+.icon-rack:before {
+  content: "\e931";
+}
+.icon-euro-circle:before {
+  content: "\e92e";
+}
+.icon-rocket:before {
+  content: "\e92c";
+}
+.icon-user-change:before {
+  content: "\e92d";
+}
+.icon-instagram-circle:before {
+  content: "\e938";
+}
+.icon-facebook-circle:before {
+  content: "\e921";
+}
+.icon-linkedin-circle:before {
+  content: "\e922";
+}
+.icon-twitter-circle:before {
+  content: "\e923";
+}
+.icon-minus-circle:before {
+  content: "\e91f";
+}
+.icon-plus-circle:before {
+  content: "\e920";
+}
+.icon-bars:before {
+  content: "\e91e";
+}
+.icon-battery:before {
+  content: "\e90d";
+}
+.icon-business-man:before {
+  content: "\e90e";
+}
+.icon-alarm-clock:before {
+  content: "\e91d";
+}
+.icon-calendar-clock1:before {
+  content: "\e90f";
+}
+.icon-code:before {
+  content: "\e910";
+}
+.icon-coffee:before {
+  content: "\e911";
+}
+.icon-comment-question:before {
+  content: "\e912";
+}
+.icon-comments:before {
+  content: "\e913";
+}
+.icon-cutlery:before {
+  content: "\e914";
+}
+.icon-download:before {
+  content: "\e915";
+}
+.icon-graduation-hat:before {
+  content: "\e916";
+}
+.icon-laptop:before {
+  content: "\e917";
+}
+.icon-terminal:before {
+  content: "\e918";
+}
+.icon-user-card:before {
+  content: "\e919";
+}
+.icon-user-links:before {
+  content: "\e91a";
+}
+.icon-user-question:before {
+  content: "\e91b";
+}
+.icon-file-pdf:before {
+  content: "\e91c";
+}
+.icon-calendar-clock:before {
+  content: "\e90c";
+}
+.icon-chevron-left-circle:before {
+  content: "\e932";
+}
+.icon-chevron-right-circle:before {
+  content: "\e933";
+}
+.icon-chevron-up-circle:before {
+  content: "\e934";
+}
+.icon-chevron-down-circle:before {
+  content: "\e935";
+}
+.icon-chevron-left:before {
+  content: "\e907";
+}
+.icon-chevron-right:before {
+  content: "\e908";
+}
+.icon-chevron-down:before {
+  content: "\e909";
+}
+.icon-chevron-up:before {
+  content: "\e90a";
+}
+.icon-swipe-gesture:before {
+  content: "\e906";
+}
+.icon-calendar:before {
+  content: "\e902";
+}
+.icon-chair:before {
+  content: "\e903";
+}
+.icon-map-marker:before {
+  content: "\e904";
+}

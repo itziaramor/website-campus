@@ -1,0 +1,618 @@
+// -----------------------------------------------------------------------------
+// HOME: HEADER
+// -----------------------------------------------------------------------------
+// (1)
+// Explorer y Edge soportan clip-path (sin ser #svg) por lo que no podemos aplicar bien
+// el filtro de desenfoque, por eso tenemos que aumentar la opacidad del velo para que sea legible el texto
+// para esto usamos @supports y aplicamos unos estilos u otros
+
+.home-header {
+  position: relative;
+  min-height: 100vh;
+  margin-bottom: 64px;
+  background-size: cover;
+  color: $white;
+  text-align: center;
+  overflow: hidden;
+
+  &__inner {
+    position: relative;
+    z-index: 10;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 22px;
+  }
+
+  &__heading {
+    @include underline-heading($white);
+    line-height: 1.4;
+  }
+
+  &__btn {
+    display: block;
+    margin-top: 20px;
+    &:first-of-type {
+      margin-top: 35px;
+    }
+    .btn {
+      @include hover-focus {
+        background-color: rgba($white, 0.08);
+      }
+    }
+  }
+
+  &__companies {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 26rem;
+    padding-left: 0;
+    margin-top: 1.5rem;
+    list-style-type: none;
+
+    > li {
+      flex: 0 0 50%;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      transform: translate3d(0, -1rem, 0);
+      transition: all 0ms;
+    }
+  }
+
+  .main-slider {
+    height: 100vh;
+    text-align: left;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1.5rem;
+      background-color: $white;
+      opacity: 0.2;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    &__logo {
+      position: absolute;
+      top: 2rem;
+      left: 1.5rem;
+      z-index: 3;
+
+      > svg {
+        width: 10rem;
+        height: 3.6875rem;
+      }
+    }
+
+    &__content {
+    }
+
+    &__item {
+      height: 100vh;
+      position: relative;
+
+      // &--three {
+      //   .main-slider__item__buttons .btn:first-child {
+      //     display: none;
+      //   }
+      //   .main-slider__item__buttons .btn:not(:first-child) {
+      //     display: inline-block;
+      //   }
+      // }
+
+      > .container {
+        min-height: 12.5rem;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        padding: 0 1.5rem;
+        position: absolute;
+        top: 7rem;
+        left: 50%;
+        z-index: 2;
+        transform: translate3d(-50%, 0, 0);
+      }
+
+      &__content {
+        > h1 {
+          opacity: 0;
+          transform: translate3d(0, -1rem, 0);
+        }
+
+        > h2 {
+          font-size: 1rem;
+          line-height: 1.9;
+          opacity: 0;
+          transform: translate3d(0, -1rem, 0);
+          transition: all 0ms;
+        }
+
+        > p {
+          opacity: 0;
+          transform: translate3d(0, -1rem, 0);
+          transition: all 0ms;
+        }
+      }
+
+      &__buttons {
+        width: $grid-container;
+        max-width: 100%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        z-index: 2;
+        transform: translate3d(-50%, -50%, 0);
+
+        // Modifiers
+        &--grant {
+          a:nth-child(2) {
+            display: none;
+          }
+        }
+
+        .btn {
+          padding: 0.75rem 1.1rem;
+          opacity: 0;
+          transform: translate3d(0, 1rem, 0);
+          transition: all 0ms;
+
+          &:not(:first-child) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &__fig {
+      width: 100%;
+      height: 100vh;
+      margin-bottom: 0;
+      overflow: hidden;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &::before {
+        height: 70%;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.55);
+        border-bottom: 1px solid $white;
+
+        // (1)
+        @supports (clip-path: none) {
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      // Capture w JS the SRC of the image in use
+      // Concatenate the method url() to the string
+      // Assign it to --bg-image
+      // Use it as background-image
+      &::after {
+        // height: 100%;
+        height: 50%;
+        z-index: 1;
+        background: {
+          image: var(--bg-image);
+          position: 50% 50%;
+          repeat: no-repeat;
+          size: cover;
+        }
+        // clip-path: url(#myClipPath)
+        filter: blur(5px);
+        clip-path: polygon(0 0, 100% 0, 100% 70%, 0 70%);
+        clip: polygon(0 0, 100% 0, 100% 70%, 0 70%);
+
+        // (1)
+        @supports (clip-path: none) {
+          height: 100%;
+        }
+      }
+
+      > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+
+  .slick-dots {
+    @include rem(right, 32px);
+    top: 70vh;
+    transform: translateY(-50%);
+    z-index: 0;
+    bottom: auto;
+    width: auto;
+    height: 20px;
+
+    li {
+      vertical-align: top;
+      margin: 0 6px;
+      button {
+        &:before {
+          width: 20px;
+          height: 20px;
+          background-color: $white;
+          border: 1px solid #718695;
+        }
+      }
+      &.slick-active {
+        button {
+          &:before {
+            background-color: #718695;
+            border-color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -2rem, 0);
+  }
+  10%,
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 0.5rem, 0);
+  }
+}
+
+.scroll-icons {
+  position: absolute;
+  // bottom: 10vh;
+  bottom: 3.5rem;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  fill: $white;
+
+  &__mb {
+    display: inline-block;
+    width: 45px;
+    height: 54px;
+  }
+
+  &__dk {
+    display: none;
+    width: 45px;
+    height: 80px;
+  }
+
+  &__animate {
+    animation: {
+      name: scrollDown;
+      duration: 1500ms;
+      timing-function: linear;
+      delay: 0ms;
+      iteration-count: infinite;
+      fill-mode: forwards;
+    }
+  }
+}
+
+// EXCEPTIONS
+.main-slider__item--black-friday {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .main-slider__fig {
+    &::before {
+      background-color: rgba(0, 0, 0, 0.62);
+
+      // (1)
+      @supports (clip-path: none) {
+        background-color: rgba(0, 0, 0, 0.62);
+      }
+    }
+  }
+
+  a:nth-child(2) {
+    display: none;
+  }
+}
+
+// Attaching transitions to the elements animated of the slider
+// 'slick-active' class
+// -----------------------------------------------------------------------------
+.home-header {
+  .slick-active {
+    h1,
+    h2,
+    p {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    h1 {
+      transition: all 450ms ease 500ms;
+    }
+
+    h2 {
+      transition: all 500ms ease 600ms;
+    }
+
+    p {
+      transition: all 500ms ease 650ms;
+    }
+
+    .home-header__companies {
+      li {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+        transition: all 500ms ease 600ms;
+
+        @for $i from 1 to 4 {
+          &:nth-child(#{$i}) {
+            transition-delay: 600ms + ($i * 50ms);
+          }
+        }
+      }
+    }
+
+    .btn {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      transition: all 400ms ease 750ms;
+
+      @for $i from 1 to 4 {
+        &:nth-child(#{$i}) {
+          transition-delay: 750ms + ($i * 50ms);
+        }
+      }
+    }
+  }
+}
+
+// @media Smartphone to up
+// -----------------------------------------------------------------------------
+@include media-breakpoint-up(sm) {
+  .home-header {
+    .main-slider {
+      &__item {
+        &__buttons {
+          .btn {
+            padding-left: 1.75rem;
+            padding-right: 1.75rem;
+          }
+        }
+      }
+    }
+  }
+
+  .scroll-icons {
+    display: block;
+
+    &__mb {
+    }
+  }
+}
+
+// @media Tablet to up
+// -----------------------------------------------------------------------------
+@include media-breakpoint-up(md) {
+  .home-header {
+    &__inner {
+      max-width: span(10);
+    }
+
+    &__logo {
+      margin-bottom: 17px;
+      img {
+        width: 79px;
+        height: 95px;
+      }
+    }
+
+    &__btn {
+      &:first-of-type {
+        margin-top: 55px;
+      }
+    }
+
+    &__companies {
+      flex-wrap: nowrap;
+      align-items: center;
+      max-width: initial;
+
+      > li {
+        flex: 0 0 auto;
+        margin-bottom: 0;
+
+        + li {
+          margin-left: 2rem;
+        }
+      }
+    }
+
+    .main-slider {
+      &__item {
+        > .container {
+          height: 36%;
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+        &__content {
+          width: calc(100% - 3rem);
+
+          > h1 {
+            margin-bottom: 2rem;
+          }
+
+          > h2 {
+            display: block;
+          }
+        }
+        &__buttons {
+          top: 53.2%;
+          padding: 0 2rem;
+
+          // Modifiers
+          &--grant {
+            margin-top: 4.35rem;
+
+            a:nth-child(1) {
+              display: none;
+            }
+            a:nth-child(2) {
+              display: block;
+            }
+          }
+
+          &--black-friday {
+            margin-top: 5.625rem;
+
+            a:nth-child(1) {
+              display: none;
+            }
+            a:nth-child(2) {
+              display: block;
+            }
+          }
+
+          .btn {
+            padding-left: 2.375rem;
+            padding-right: 2.375rem;
+
+            + .btn {
+              display: inline-block;
+            }
+          }
+        }
+      }
+      &__fig {
+        &::before {
+          height: 53.2%;
+        }
+        &::after {
+          clip-path: polygon(0 0, 100% 0, 100% 53.2%, 0 53.2%);
+          path: polygon(0 0, 100% 0, 100% 53.2%, 0 53.2%);
+        }
+      }
+    }
+
+    .slick-dots {
+      @include rem(right, 45px);
+      top: 53.2vh;
+    }
+  }
+}
+
+// @media Desktop to up
+// -----------------------------------------------------------------------------
+@include media-breakpoint-up(lg) {
+  .home-header {
+    &__inner {
+      max-width: span(7);
+    }
+
+    .main-slider {
+      &__logo {
+        left: 3rem;
+
+        > svg {
+          width: 11.5rem;
+          height: 4.25rem;
+        }
+      }
+      &__item {
+        > .container {
+          padding-left: 3rem;
+          padding-right: 3rem;
+        }
+        &__content {
+          width: calc(65% - 3rem);
+        }
+        &__buttons {
+          padding: 0 3rem;
+        }
+      }
+    }
+    .scroll-icons {
+      display: block;
+
+      &__mb {
+        display: none;
+      }
+      &__dk {
+        display: block;
+      }
+    }
+  }
+}
+
+// @media Desktop Full HD to up
+// -----------------------------------------------------------------------------
+@include media-breakpoint-up(xl) {
+  .home-header {
+    &__inner {
+      max-width: span(5.5);
+    }
+
+    .main-slider {
+      &__item {
+        &__content {
+          width: calc(50% - 2rem);
+        }
+      }
+    }
+  }
+}
+
+// @media for iPad in landscape mode
+// -----------------------------------------------------------------------------
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .home-header {
+    .main-slider {
+      &__item {
+        &__content {
+          width: calc(75% - 3rem);
+        }
+        &__buttons {
+          top: 60%;
+        }
+      }
+      &__fig {
+        &::before {
+          height: 60%;
+        }
+        &::after {
+          clip-path: polygon(0 0, 100% 0, 100% 60%, 0 60%);
+        }
+      }
+    }
+
+    .slick-dots {
+      top: 60vh;
+    }
+  }
+}

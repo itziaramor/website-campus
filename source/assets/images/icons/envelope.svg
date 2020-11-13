@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="22px" viewBox="0 0 34 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="04-Contacto" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="04-E-Contacto" transform="translate(-1037.000000, -1916.000000)" fill="#000000" fill-rule="nonzero">
+            <path d="M1067.6,1916 L1040.4,1916 C1038.5249,1916 1037,1917.518 1037,1919.38462 L1037,1934.61538 C1037,1936.482 1038.5249,1938 1040.4,1938 L1067.6,1938 C1069.4751,1938 1071,1936.482 1071,1934.61538 L1071,1919.38462 C1071,1917.518 1069.4751,1916 1067.6,1916 Z M1065,1919 L1054.5,1925 L1044,1919 L1065,1919 Z M1040,1934 L1040,1921.00166 L1052.60484,1928.76144 C1052.8782,1928.9293 1053.18868,1929.01406 1053.49916,1929.01406 C1053.80964,1929.01406 1054.12012,1928.9293 1054.39348,1928.76144 L1066.99831,1921 L1067,1934 L1040,1934 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

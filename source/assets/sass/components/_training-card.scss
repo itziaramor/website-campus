@@ -1,0 +1,173 @@
+// -----------------------------------------------------------------------------
+// CARD TRAINING
+// -----------------------------------------------------------------------------
+
+.training-card {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -25px;
+    z-index: 5;
+    border-top-left-radius: 65px;
+    background-color: $blue-300;
+    transform: $skewY-base-clockwise;
+  }
+
+  + .training-card {
+    margin-top: -20px;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 10;
+    padding: 70px 47px 100px 40px;
+    color: $white;
+  }
+
+  &__heading,
+  &__info {
+    font-weight: 400;
+  }
+
+  &__heading {
+    @include rem(margin-bottom, 14px);
+    @include rem(font-size, 18px);
+    display: flex;
+    align-items: center;
+    a {
+      color: $white;
+      transition: $transition-base;
+      @include hover-focus {
+        color: rgba($white, 0.7);
+      }
+    }
+    [class*='icon'] {
+      @include rem(margin-right, 10px);
+      @include rem(font-size, 24px);
+    }
+  }
+
+  &__info {
+    line-height: 1.4;
+  }
+
+  &__date {
+    display: block;
+    color: rgba($white, 0.75);
+  }
+
+  p:last-of-type {
+    @include rem(margin-bottom, 24px);
+  }
+
+  .btn {
+    &--xs {
+      @include rem(padding, 3.5px 15px);
+      @include rem(font-size, 13px);
+      font-weight: 200;
+    }
+  }
+
+  &__badge {
+    @include rem(margin-top, 16px);
+    display: flex;
+    align-items: center;
+    [class*='icon'] {
+      @include rem(font-size, 27px);
+    }
+    .btn + [class*='icon'] {
+      @include rem(margin-left, 14px);
+    }
+  }
+
+  // @media Tablet to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(md) {
+    &::before {
+      left: -25px;
+      border-top-left-radius: 65px;
+    }
+    &:nth-child(1)::before {
+      min-height: 640px;
+    }
+    &:nth-last-child(1)::before,
+    &:nth-last-child(2)::before {
+      border-bottom-left-radius: 46px;
+    }
+    &:nth-last-child(2)::before {
+      border-bottom-right-radius: 60px;
+    }
+
+    + .training-card {
+      margin-top: 0;
+
+      &::before {
+        content: '';
+        z-index: 5;
+        min-height: 615px;
+      }
+      &:nth-child(even)::before {
+        box-shadow: 0 13px 18px rgba($black, 0.5);
+      }
+    }
+  }
+
+  // @media Desktop to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(lg) {
+    .training-card:nth-child(3) {
+      margin-top: -30px;
+    }
+    .training-card:nth-child(6) {
+      margin-top: 48px;
+    }
+  }
+
+  // @media Wider to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(xl) {
+    &::before {
+      left: 0;
+      border-radius: 65px 46px 60px 46px;
+    }
+    &:nth-child(1)::before {
+      border-bottom-left-radius: 0;
+    }
+    &:nth-child(6) {
+      margin-top: -30px !important;
+    }
+    + .training-card {
+      margin-left: -86px;
+      &::before {
+        box-shadow: 0 13px 18px rgba($black, 0.5);
+      }
+      &:nth-child(4)::before {
+        box-shadow: none;
+      }
+    }
+    .training-card:nth-child(3) {
+      margin-top: 0;
+    }
+    &__inner {
+      padding-right: 110px;
+    }
+    // As Docker text is shorter than others we pull the button from the top
+    &.training-card--docker {
+      margin-top: 0 !important;
+
+      // .training-card__action {
+      //   margin-top: 54px;
+      // }
+    }
+    // As JS text is shorter than others we pull the button from the top
+    &.training-card--javascript {
+      .training-card__action {
+        margin-top: 54px;
+      }
+    }
+  }
+}

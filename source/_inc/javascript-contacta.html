@@ -1,0 +1,188 @@
+<script type="text/javascript">
+
+    function initMap() {
+        // Styles a map in night mode.
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 40.38953846352721, lng: -3.694554299999936},
+            zoom: 16,
+            disableDefaultUI: true,
+            styles: [
+            {
+                elementType: "geometry",
+                stylers: [
+                {
+                    color: "#212121"
+                }
+                ]
+            },
+            {
+                elementType: "geometry.fill",
+                stylers: [
+                {
+                    color: "#1c352f"
+                }
+                ]
+            },
+            {
+                elementType: "labels.icon",
+                stylers: [
+                {
+                    "visibility": "off"
+                }
+                ]
+            },
+            {
+                elementType: "labels.text.fill",
+                stylers: [
+                {
+                    color: "#ffffff"
+                }
+                ]
+            },
+            {
+                elementType: "labels.text.stroke",
+                stylers: [
+                {
+                    visibility: "off"
+                }
+                ]
+            },
+            {
+                featureType: "administrative",
+                elementType: "geometry",
+                stylers: [
+                {
+                    color: "#757575"
+                }
+                ]
+            },
+            {
+                featureType: "administrative.country",
+                elementType: "labels.text.fill",
+                stylers: [
+                {
+                    color: "#9e9e9e"
+                }
+                ]
+            },
+            {
+                featureType: "administrative.land_parcel",
+                stylers: [
+                {
+                    visibility: "off"
+                }
+                ]
+            },
+            {
+                featureType: "administrative.locality",
+                elementType: "labels.text.fill",
+                stylers: [
+                {
+                    color: "#bdbdbd"
+                }
+                ]
+            },
+            {
+                featureType: "poi",
+                elementType: "labels.text.fill",
+                stylers: [
+                {
+                    color: "#757575"
+                }
+                ]
+            },
+            {
+                featureType: "poi.park",
+                elementType: "geometry",
+                stylers: [
+                {
+                    color: "#22342f"
+                }
+                ]
+            },
+            {
+                featureType: "poi.park",
+                elementType: "labels.text.fill",
+                stylers: [
+                {
+                    color: "#616161"
+                }
+                ]
+            },
+            {
+                featureType: "poi.park",
+                elementType: "labels.text.stroke",
+                stylers: [
+                {
+                    color: "#1b1b1b"
+                }
+                ]
+            },
+            {
+                featureType: "road",
+                stylers: [
+                {
+                    color: "#2e4741"
+                }
+                ]
+            },
+            {
+                featureType: "road",
+                elementType: "geometry.fill",
+                stylers: [
+                {
+                    color: "#1c2d28"
+                }
+                ]
+            },
+            {
+                featureType: "road",
+                elementType: "labels.text.fill",
+                stylers: [
+                {
+                    "color": "#8a8a8a"
+                }
+                ]
+            },
+            {
+                featureType: "transit",
+                elementType: "labels.text.fill",
+                stylers: [
+                {
+                    "color": "#757575"
+                }
+                ]
+            },
+            {
+                featureType: "water",
+                elementType: "geometry",
+                stylers: [
+                {
+                    "color": "#000000"
+                }
+                ]
+            },
+            {
+                featureType: "water",
+                elementType: "labels.text.fill",
+                stylers: [
+                {
+                    color: "#3d3d3d"
+                }
+                ]
+            }
+            ]
+        });
+
+        //var pin = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+        var pin = 'https://campus.boream.com/assets/images/icons/pin-map.png';
+        var marker = new google.maps.Marker({
+            position: {lat: 40.38953846352721, lng: -3.694554299999936},
+            map: map,
+            icon: pin
+        });
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6f4V4oYxWDIhyVSJbBBIbiubJSstMx8E&callback=initMap" async defer></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script type="text/javascript" src="assets/js/contact-min.js"></script>

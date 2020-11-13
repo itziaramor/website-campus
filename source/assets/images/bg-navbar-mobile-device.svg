@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="768px" height="988px" viewBox="0 0 768 988" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 17</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="89.7732927%" y1="0%" x2="44.5515281%" y2="76.8765155%" id="linearGradient-1">
+            <stop stop-color="#105580" offset="0%"></stop>
+            <stop stop-color="#38D0D4" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="91.2670017%" y1="86.2982962%" x2="6.4554091%" y2="64.6489901%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="131.798685%" y1="-31.9751731%" x2="8.69658752%" y2="67.1411582%" id="linearGradient-3">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="01-Ficha-bootcamp" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-T-Ficha-Bootcamp-Scroll-Navegación" transform="translate(0.000000, -97.000000)">
+            <g id="Navegación-cursos" transform="translate(-558.000000, -761.000000)">
+                <g id="Navegación">
+                    <g id="Group-19">
+                        <g id="Group-17">
+                            <polygon id="Rectangle-2" fill="url(#linearGradient-1)" opacity="0.97" points="488 858.906081 1420 858.906081 1420 1954 488 1954"></polygon>
+                            <path d="M1101.06739,865.640779 C1126.69307,1056.4506 1080.79468,1218.42659 961.814234,1292.77383 C802.517793,1392.31329 559.469773,1305.25338 357.852194,1096.80949 C438.196458,1159.59129 539.344501,1197.00829 649.236951,1197.00829 C861.288073,1197.00829 1040.77984,1057.68799 1101.06739,865.640717 Z M220.801057,925.485386 C214.662152,916.213526 208.612131,906.81064 202.656462,897.279577 C-13.2407002,551.771894 -23.3926494,168.662065 179.981449,41.5798242 C350.971686,-65.2667349 618.461077,42.8877999 827.625828,285.38573 C772.569257,262.988966 712.345001,250.649318 649.236951,250.649318 C387.751657,250.649318 175.775943,462.49899 175.775943,723.828804 C175.775943,795.954594 191.92285,864.311315 220.80106,925.48539 Z" id="Combined-Shape" fill="url(#linearGradient-2)"></path>
+                            <path d="M890.220867,1131.21665 C855.803691,1159.90578 817.939843,1186.43354 776.93566,1210.10732 C492.556305,1374.29382 164.81732,1339.03106 44.9101483,1131.34574 C-53.677622,960.586716 18.92722,726.433551 205.925545,557.309151 C186.436595,609.106411 175.775943,665.223384 175.775943,723.828804 C175.775943,985.158618 387.751657,1197.00829 649.236951,1197.00829 C737.236371,1197.00829 819.628484,1173.01483 890.22087,1131.21665 Z" id="Combined-Shape" fill="url(#linearGradient-3)" opacity="0.387779018"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

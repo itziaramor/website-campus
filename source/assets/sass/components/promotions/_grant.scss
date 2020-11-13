@@ -1,0 +1,208 @@
+// -----------------------------------------------------------------------------
+// Grant (BECAS)
+// -----------------------------------------------------------------------------
+
+.grant {
+  @include rem(margin-bottom, 54px);
+  text-align: center;
+
+  .bootcamp-sheet__details__features + & {
+    @include rem(margin-top, -110px);
+  }
+
+  .container {
+    padding-left: span(0.5);
+  }
+
+  &-shield {
+    margin: 0 auto 2.5rem;
+    overflow: hidden;
+    z-index: 100;
+
+    &--mb {
+      margin: 0 auto;
+      overflow: visible;
+      position: relative;
+      z-index: 999;
+
+      // &::before {
+      //   @include rem(width, calc(100% + 28px));
+      //   @include rem(height, 10px);
+      //   @include rem(left, -14px);
+      //   content: '';
+      //   display: block;
+      //   background-color: $white;
+      //   position: absolute;
+      //   top: 0;
+      //   z-index: 1;
+      // }
+    }
+
+    &--dk {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1001;
+
+      .grant-shield__image {
+        transform: none;
+      }
+    }
+
+    // &__image {
+    //   @include rem(transform, translateY(10px));
+    // }
+  }
+
+  &__heading {
+    @include rem(max-width, 670px);
+    @include rem(margin, 0 auto 20px);
+    font-size: 1.5rem;
+    color: $purple-200;
+  }
+
+  &__text {
+    @include rem(max-width, 670px);
+    @include rem(margin, 0 auto 38px);
+  }
+
+  &__link {
+    display: block;
+    color: $purple-200;
+  }
+
+  &__content {
+    .grant-shield__image {
+      @include rem(transform, translateY(-4px));
+    }
+  }
+
+  &-form {
+    max-width: 35rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__heading {
+      @include rem(font-size, 36px);
+      @include rem(margin-bottom, 14px);
+      color: $purple-200;
+    }
+
+    &__wrap {
+      margin-top: 2.5rem;
+      text-align: left;
+
+      .contact__form__legal {
+        @include rem(max-width, 320px);
+        margin: 1.875rem auto 0;
+      }
+
+      [target='_blank'] {
+        color: $purple-200;
+      }
+
+      .form-btn {
+        margin: 3rem auto 0;
+      }
+    }
+
+    &__thanks {
+      @include rem(max-width, 425px);
+      @include rem(margin, 40px auto 4.5rem);
+      color: $purple-200;
+      text-align: center;
+
+      > b {
+        @include rem(font-size, 36px);
+        @include rem(margin-bottom, 14px);
+        font-weight: 100;
+        color: inherit;
+      }
+
+      [class*='icon'] {
+        @include rem(margin-bottom, 15px);
+        @include rem(font-size, 60px);
+        display: block;
+      }
+    }
+  }
+
+  .list-group__horizontal [class*='site-heading'] {
+    color: $purple-200;
+  }
+
+  .btn.btn--secondary {
+    margin: 0 auto 2.375rem;
+  }
+
+  // @media Tablet to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(md) {
+    @at-root .grant-shield--mb {
+      display: none;
+    }
+
+    @at-root .grant-shield--dk {
+      display: block;
+    }
+
+    .bootcamp-sheet__details__features + & {
+      @include rem(margin-top, -118px);
+    }
+  }
+
+  // @media Desktop to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(lg) {
+    .list-group__horizontal {
+      .list-group__item.accordion_type2 {
+        max-width: initial;
+
+        &:nth-child(2) {
+          flex-grow: 2;
+        }
+      }
+    }
+  }
+
+  // @media Large Desktop to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(xl) {
+    .form-btn {
+      max-width: 100%;
+    }
+    .grant-form__wrap {
+      @include rem(transform, translateX(-110px));
+    }
+    .contact__form__legal {
+      @include rem(transform, translateX(110px));
+    }
+  }
+}
+
+// BLACK FRIDAY PROMOTION
+.grant--black-friday {
+  .grant__heading {
+    margin-top: -4rem;
+    color: $black;
+    font-size: 1.5rem;
+  }
+}
+
+.grant {
+  &-highlight {
+    color: $purple-200 !important;
+  }
+}
+
+.black-friday {
+  &-logo {
+    margin-bottom: 1.25rem;
+  }
+
+  &-highlight {
+    color: $purple-200 !important;
+  }
+}

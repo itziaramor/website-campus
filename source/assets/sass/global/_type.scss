@@ -1,0 +1,63 @@
+// -----------------------------------------------------------------------------
+// TYPE
+// -----------------------------------------------------------------------------
+
+
+// Headings
+// -----------------------------------------------------------------------------
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: $headings-margin-bottom;
+  font-family: $headings-font-family;
+  font-weight: 300;
+  line-height: $headings-line-height;
+  color: $headings-color;
+
+  @include media-breakpoint-up(md) {
+    font-weight: $headings-font-weight;
+  }
+}
+
+h1 { @include rem(font-size, 24px) }
+h2 { font-size: $h2-font-size; }
+h3 { font-size: $h3-font-size; }
+h4 { font-size: $h4-font-size; }
+h5, h6 { font-weight: 600; text-transform: uppercase }
+h5 { font-size: $h5-font-size }
+h6 { font-size: $h6-font-size }
+
+
+// @media Tablet to up
+// -----------------------------------------------------------------------------
+@include media-breakpoint-up(md) {
+  h1, h2 { font-size: $h1-font-size }
+}
+
+
+// Emphasis
+// -----------------------------------------------------------------------------
+small,
+.small {
+  font-size: $small-font-size;
+  font-weight: $font-weight-normal;
+}
+
+mark,
+.mark {
+  padding: $mark-padding;
+  background-color: $mark-bg;
+}
+
+
+// Text color
+// -----------------------------------------------------------------------------
+.text--primary { color: $green-200 }
+.text--secondary { color: $purple-200 }
+.text--muted { color: $gray-400 }
+
+
+// Text align
+// -----------------------------------------------------------------------------
+.text--center { text-align: center }
+
+// Text hightlight
+.text--highlight { color: $green-100; }

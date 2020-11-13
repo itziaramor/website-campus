@@ -1,0 +1,84 @@
+// -----------------------------------------------------------------------------
+// ACCORDION
+// -----------------------------------------------------------------------------
+
+.accordion {
+
+  &__item {
+    @include rem(padding, 10px 0);
+  }
+
+  &__heading {
+    @include rem(margin-bottom, 13px);
+  }
+
+  &__pane {
+    height: 0;
+    overflow: hidden;
+  }
+
+  &__body {
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  
+  
+  // Icon
+  // -----------------------------------------------------------------------------
+  &__btn {
+    background-color: transparent;
+    color: $body-color;
+    line-height: 1.5;
+    text-align: left;
+    white-space: initial;
+    font-weight: $font-weight-base;
+
+    &::after {
+      @include rem(margin-left, 8px);
+      @include rem(font-size, 12px);
+      content: $icon-chevron-down;
+      font-family: '#{$icomoon-font-family}' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  }
+
+
+  // Open
+  // -----------------------------------------------------------------------------
+  &__item--show {
+    box-shadow: 0 3px 15px rgba($black, .2);
+    .accordion__btn {
+      color: $green-200;
+      &::after {
+        content: $icon-chevron-up;
+      }
+    }
+    .accordion__header {
+      @include rem(padding-top, 10px);
+    }
+    .accordion__pane {
+      @include rem(padding-bottom, 10px);
+      height: auto;
+      overflow: visible;
+    }
+
+  }
+  
+  
+
+  // @media Desktop to up
+  // -----------------------------------------------------------------------------
+  
+  
+  
+}

@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------------
+// FAQS CAMPUS BOREAM
+// -----------------------------------------------------------------------------
+
+.cb-faqs {
+  @include asparagus(65%);
+  position: relative;
+  z-index: 5;
+  &::after {
+    background-color: $purple-200;
+  }
+  
+  &__heading {
+    @include underline-heading($green-200, 0);
+    color: $purple-200;
+  }
+  
+
+  // @media Tablet to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(md) {
+    .accordion__body {
+      max-width: span(10);
+    }
+  }
+
+
+  // @media Desktop to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(lg) {
+    /*
+    &__heading,
+    .accordion__item {
+      padding-left: span(.5);
+    }
+    */
+    &__heading {
+      padding-left: span(.5);
+    }
+    .accordion__item {
+      .container {
+        padding-left: span(.5);
+      }
+    }
+    .accordion__body {
+      max-width: span(8);
+    }
+  }
+  
+  
+}

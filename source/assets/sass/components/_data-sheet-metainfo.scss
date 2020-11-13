@@ -1,0 +1,60 @@
+// -----------------------------------------------------------------------------
+// NAVBAR
+// -----------------------------------------------------------------------------
+
+.data-sheet__metainfo {
+  @include rem(margin, -20px 10px 40px);
+  @include rem(font-size, 14px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 0;
+  font-weight: 400;
+  list-style: none;
+  text-align: center;
+  .training__page & {
+    justify-content: center;
+  }
+  li {
+    @include rem(margin-top, 20px);
+    @include rem(padding, 0 10px);
+    flex: 1 0 span(5.5);
+    max-width: span(5.5);
+  }
+  [class*="icon"] {
+    @include rem(font-size, 24px);
+    display: block;
+    width: 73px;
+    border-bottom: 1px solid $white;
+    margin: 0 auto 7px;
+    padding-bottom: 10px;
+  }
+
+
+  // @media Tablet to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(md) {
+    @include rem(margin, 0 0 50px);
+    justify-content: flex-start;
+    li {
+      @include rem(flex-basis, 90px);
+      max-width: none;
+      margin-top: 0;
+      padding: 0;
+    }
+    li + li {
+      @include rem(margin-left, 30px);
+    }
+  }
+
+
+  // @media Desktop to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(lg) {
+    &__list {
+      li + li {
+        @include rem(margin-left, 56px);
+      }
+    }
+  }
+}

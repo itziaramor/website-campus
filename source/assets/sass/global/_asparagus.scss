@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// ASPARAGUS
+// -----------------------------------------------------------------------------
+
+$asparagus-rotate: 13.5deg !default;
+
+.asparagus {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  transform: rotate($asparagus-rotate);
+
+  &__item {
+    display: block;
+    width: 710px;
+    height: 28px;
+    border-radius: 100px;  
+  }
+
+  &--right {
+    align-items: flex-end;
+    transform: rotate(-$asparagus-rotate);
+  }
+
+}
+
+
+.blue {
+  &--100 { background-color: $blue-100 }
+  &--200 { background-color: $blue-200 }
+  &--300 { background-color: $blue-300 }
+}
+
+.green {
+  &--100 { background-color: $green-100 }
+  &--200 { background-color: $green-200 }
+  &--300 { background-color: $green-300 }
+}
+
+.purple {
+  &--100 { background-color: $purple-100 }
+  &--200 { background-color: $purple-200 }
+}

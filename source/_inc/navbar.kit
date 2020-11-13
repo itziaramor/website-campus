@@ -1,0 +1,113 @@
+<nav class="navbar">
+  <div class="navbar__container">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img
+          src="assets/images/logos/campus-boream.png"
+          width="159"
+          alt="Campus Boream"
+        />
+      </a>
+
+      <div class="navbar__page">
+        <strong><!-- $navbarPageTitle? --></strong>
+        <a
+          href="<!-- $navbarPageCTALink? -->"
+          class="btn btn--primary btn--primary-200 btn--xs"
+          ><!-- $navbarPageCTA? --></a
+        >
+        <a href="https://api.whatsapp.com/send?phone=34608281214" class="navbar__page-whatsapp">
+          <span>Escríbenos por WhatsApp</span>
+          <i class="whatsapp__icon" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <button
+        type="button"
+        id="navbarTogglerButton"
+        class="navbar__toggler"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <i class="icon-bars" aria-hidden="true"></i>
+        <span class="sr-only">Menú</span>
+      </button>
+
+      <div class="navbar__nav__container" aria-labelledby="navbarTogglerButton">
+        <div class="nav__heading">
+          <a href="bootcamp-full-stack-developer.html">
+            <i class="icon-bootcamp-circle" aria-hidden="true"></i>
+            Bootcamp <span class="year">2020</span>
+            <span class="nav__heading__name">Fullstack Developer</span>
+          </a>
+        </div>
+        <ul class="navbar__nav">
+          <li class="nav__item__dropdown">
+            <button
+              type="button"
+              class="btn btn--link nav__btn"
+              data-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Cursos monográficos
+            </button>
+            <div class="dropdown">
+              <div class="dropdown__inner">
+                <ul class="nav__dropdown__list">
+                  <li class="nav__dropdown__item">
+                    <a href="curso-angular.html">
+                      <i class="icon-angular" aria-hidden="true"></i>
+                      Angular 9
+                      <span class="date">2020</span>
+                    </a>
+                  </li>
+                  <li class="nav__dropdown__item">
+                    <a href="curso-react.html">
+                      <i class="icon-react" aria-hidden="true"></i>
+                      React <span class="date">2020</span>
+                    </a>
+                  </li>
+                  <li class="nav__dropdown__item">
+                    <a href="curso-docker-kubernetes.html">
+                      <i class="icon-docker" aria-hidden="true"></i>
+                      Docker + Kubernetes<span class="date">2020</span>
+                    </a>
+                  </li>
+                  <li class="nav__dropdown__item">
+                    <a href="curso-angular-avanzado.html">
+                      <i class="icon-angular" aria-hidden="true"></i>
+                      Angular Avanzado <span class="date">2020</span>
+                    </a>
+                  </li>
+                  <li class="nav__dropdown__item">
+                    <a href="curso-css-para-desarrolladores.html">
+                      <i class="icon-css" aria-hidden="true"></i>
+                      CSS para desarrolladores <span class="date">2020</span>
+                    </a>
+                  </li>
+                  <li class="nav__dropdown__item">
+                    <a href="curso-javascript-avanzado.html">
+                      <i class="icon-javascript" aria-hidden="true"></i>
+                      JavaScript Avanzado <span class="date">2020</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li
+            class="nav__item nav__item--bootcamp <!-- $navBootcampCurrent? -->"
+          >
+            <a href="bootcamp-full-stack-developer.html">Bootcamp</a>
+          </li>
+          <li class="nav__item <!-- $navEmpresasCurrent? -->">
+            <a href="formacion-medida-empresas-organizaciones.html">Empresas</a>
+          </li>
+          <li class="nav__item <!-- $navContactaCurrent? -->">
+            <a href="contacta-boream.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,80 @@
+// -----------------------------------------------------------------------------
+// CAMPAIGN: COMPANIES
+// -----------------------------------------------------------------------------
+
+.campaign-companies {
+  padding: rem(115px) 0 rem(143px);
+  position: relative;
+  overflow: hidden;
+
+  &__description {
+    text-align: left;
+
+    @include media-breakpoint-up(lg) {
+      max-width: span(6.7);
+    }
+    @include media-breakpoint-up(xl) {
+      max-width: span(8);
+    }
+  }
+
+  h2 {
+    margin-bottom: rem(57px);
+    padding-bottom: rem(38px);
+    font-family: $font-family-base;
+    font-size: rem(32px);
+    font-weight: $font-weight-base;
+    line-height: rem(40px);
+    color: $gray-800;
+    position: relative;
+
+    @include media-breakpoint-up(md) {
+      max-width: span(8);
+    }
+    @include media-breakpoint-up(lg) {
+      max-width: span(4);
+    }
+
+    &::after {
+      content: '';
+      width: rem(87px);
+      height: rem(1px);
+      background-color: $green-200;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  ul {
+    display: grid;
+    list-style-type: none;
+    padding-left: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: rem(24px) rem(16px);
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: rem(77px) rem(16px);
+    }
+
+    li {
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      max-width: 100%;
+      padding: 0;
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    img {
+      max-width: 70%;
+
+      @include media-breakpoint-up(md) {
+        max-width: 100%;
+      }
+    }
+  }
+}

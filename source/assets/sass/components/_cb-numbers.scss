@@ -1,0 +1,203 @@
+// -----------------------------------------------------------------------------
+// CB NUMBERS
+// -----------------------------------------------------------------------------
+
+.cb-numbers {
+  position: relative;
+  min-height: 665px;
+  background: #884fc6 url('../images/bg-numbers-sm.jpg') center 60px no-repeat;
+  color: $white;
+  overflow: hidden;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 10;
+  }
+  &::before {    
+    top: -8px;
+    height: 129px;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjU0NXB4IiBoZWlnaHQ9IjI5OHB4IiB2aWV3Qm94PSIwIDAgMjU0NSAyOTgiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUwLjIgKDU1MDQ3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5TaGFwZTwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJudW1iZXJzIiBmaWxsPSIjRkZGRkZGIiBmaWxsLXJ1bGU9Im5vbnplcm8iPgogICAgICAgICAgICA8cGF0aCBkPSJNMTMzNS43ODkzLDI5Ni41NjM2MzQgQzEzMjguMzI0NzMsMjY4LjU5ODMxMiAxMzAyLjgxNzg2LDI0OCAxMjcyLjUsMjQ4IEMxMjQxLjg1NDcyLDI0OCAxMjE2LjEyNDksMjY5LjA0NTYyMyAxMjA4Ljk3NTE4LDI5Ny40NzIyNCBMMCw4IEwwLDAuNSBMMjU0NC41LDAuNSBMMjU0NC41LDggTDEzMzUuNzg5MywyOTYuNTYzNjM0IFoiIGlkPSJTaGFwZSI+PC9wYXRoPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+') center bottom no-repeat;
+  }
+  &::after {
+    bottom: -280px;
+    height: 360px;
+    background-color: $white;
+    transform: skewY(13.25deg);
+  }
+
+  &__logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 139px;
+    height: 139px;
+    margin: 75px auto 30px;
+    text-align: center;
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+    }
+    &::before {
+      top: -31px;
+      left: -16px;
+      z-index: 10;
+      width: 171px;
+      height: 77px;
+      background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTcxcHgiIGhlaWdodD0iNzdweCIgdmlld0JveD0iMCAwIDE3MSA3NyIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNTEuMyAoNTc1NDQpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPkNvbWJpbmVkIFNoYXBlPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IjAwLUhvbWUiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSIwMC1FLUhvbWUtMTI4MC1ncmlkLTgtY3Vyc29zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM5LjAwMDAwMCwgLTQ0ODMuMDAwMDAwKSIgZmlsbD0iI0QxRjNEOCI+CiAgICAgICAgICAgIDxnIGlkPSJNw7NkdWxvLTYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xOTQyLjAwMDAwMCwgMzg5MS4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxnIGlkPSJBZG9ybm9zIj4KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMjcyOC43OTQ1Myw2NjcuOTg2ODUgQzI3MjIuMDc1MjUsNjM5LjkxMDUyOSAyNjk2LjI4NzI3LDYxOSAyNjY1LjUsNjE5IEMyNjM0LjU4MDcyLDYxOSAyNjA4LjcwMzY5LDY0MC4wOTAyMzYgMjYwMi4xMjAwOSw2NjguMzQ4NDA2IEwyNTgxLjA3NTkxLDY2My41NjA4MDUgQzI1ODguMTk2MDEsNjIyLjkwMzk5NCAyNjIzLjc1MTkyLDU5MiAyNjY2LjU0MjgsNTkyIEMyNzA5LjA2MzUxLDU5MiAyNzQ0LjQ0MDMzLDYyMi41MTUwMDIgMjc1MS44NzE0NCw2NjIuNzkxOTE3IEwyNzI4Ljc5NDUzLDY2Ny45ODY4NSBaIiBpZD0iQ29tYmluZWQtU2hhcGUiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+');
+    }
+    &::after {
+      top: -7px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 11;
+      background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTM5cHgiIGhlaWdodD0iMTM5cHgiIHZpZXdCb3g9IjAgMCAxMzkgMTM5IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA1MS4zICg1NzU0NCkgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+T3ZhbCA1PC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IHgxPSI0NC41NzkzMTY2JSIgeTE9IjQ2LjU1MzQ5ODElIiB4Mj0iOTMuMjYyNTMzJSIgeTI9IjY3LjE2MTA4NyUiIGlkPSJsaW5lYXJHcmFkaWVudC0xIj4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0JBRUZDNSIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjOTc5Nzk3IiBzdG9wLW9wYWNpdHk9IjAiIG9mZnNldD0iMTAwJSI+PC9zdG9wPgogICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8L2RlZnM+CiAgICA8ZyBpZD0iMDAtSG9tZSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgb3BhY2l0eT0iMC41Nzc0NTUzNTciPgogICAgICAgIDxnIGlkPSIwMC1FLUhvbWUtMTI4MC1ncmlkLTgtY3Vyc29zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjU1LjAwMDAwMCwgLTQ1MDcuMDAwMDAwKSIgc3Ryb2tlPSJ1cmwoI2xpbmVhckdyYWRpZW50LTEpIiBzdHJva2Utd2lkdGg9IjMiPgogICAgICAgICAgICA8ZyBpZD0iTcOzZHVsby02IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTk0Mi4wMDAwMDAsIDM4OTEuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8ZyBpZD0iQWRvcm5vcyI+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbC01IiBjeD0iMjY2Ni41IiBjeT0iNjg1LjUiIHI9IjY3LjUiPjwvY2lyY2xlPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=');
+    }
+  }
+
+  &__list {
+    display: flex;
+    margin: 0 -#{$grid-gutter-sm};
+    padding: 0;
+    list-style: none;
+    // width: 300vw;
+    // overflow: auto;
+  }
+
+  &__item {
+    //@include rem(flex, 1 0 190px);
+    //@include rem(max-width, 190px);
+    //margin: 0 span(1.5);
+    padding: 0 span(1.5);
+    text-align: center;
+  }
+
+  &__number {
+    @include rem(font-size, 60px);
+    @include underline-heading($white);
+    display: block;
+    font-weight: 100;
+    line-height: 1;
+    &::after {
+      width: 110px;
+    }
+  }
+
+  .swipe-gesture {
+    @include rem(margin-top, 30px);
+    @include rem(font-size, 29px);
+    text-align: center;
+    color: $white;
+  }
+
+
+  // @media Tablet to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(md) {
+    min-height: 910px;
+    margin-top: -200px;
+    padding-top: 161px;
+    background-image: url('../images/bg-numbers-lg.jpg');
+    background-position: center top;
+    &::before {
+      height: 298px;
+    }
+    &::after {
+      bottom: -225px;
+    }
+
+    .animated-gradient::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 410px;
+      height: 260px;
+      border-top-right-radius: 25px;
+      background-color: rgba($white, .4);
+      transform: $skewY-base-clockwise;
+    }
+
+    &__logo {
+      &::before {
+        top: -23px;
+      }
+      &::after {
+        top: 0;
+      }
+    }
+
+    &__list {
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__item {
+      @include rem(flex, 1 0 190px);
+      @include rem(max-width, 190px);
+      padding: 0;
+      margin: 0 span(.3);
+      //padding: 0 span(.5);
+    }
+
+    .swipe-gesture {
+      display: none;
+    }
+  }
+
+
+  // @media Desktop to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(lg) {
+    min-height: 950px;
+    margin-top: -150px;
+    padding-top: 236px;
+    background-position: center center;
+    background-size: auto;
+    &::after {
+      bottom: -295px;
+      height: 460px;
+    }
+
+    .animated-gradient::after {
+      width: 750px;
+      height: 290px;
+    }
+
+    &__logo {
+      margin-top: 0;
+    }
+
+    &__list {
+      margin: 0 span(2);
+    }
+
+    &__item {
+      margin: 0 span(.8);
+    }
+  }
+
+
+  // @media Desktop Full HD to up
+  // -----------------------------------------------------------------------------
+  @media (min-width: 1420px) {  // Dejar el valor en px
+    min-height: 1100px;
+    background-size: cover;
+    &::after {
+      bottom: -355px;
+      height: 660px;
+    }
+    .animated-gradient::after {
+      width: 790px;
+      height: 450px;
+    }
+  }
+
+}

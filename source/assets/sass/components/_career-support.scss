@@ -1,0 +1,33 @@
+// -----------------------------------------------------------------------------
+// CAREER SUPPORT
+// -----------------------------------------------------------------------------
+
+.career-support {
+  @include asparagus();
+  position: relative;
+  text-align: center;
+
+  &__intro {
+    @include rem(margin, 0 auto 60px);
+    max-width: span(10);
+  }
+
+
+  // @media Smartphone to down
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-down(sm) {
+    .list-group--collapse {
+      @include rem(margin-bottom, 10px);
+    }
+  }
+
+
+  // @media Desktop to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(lg) {
+    &__intro {
+      max-width: span(6);
+    }
+  }
+
+}

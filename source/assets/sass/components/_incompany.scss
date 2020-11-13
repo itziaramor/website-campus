@@ -1,0 +1,192 @@
+// -----------------------------------------------------------------------------
+// INCOMPANY PAGE
+// -----------------------------------------------------------------------------
+
+
+// Header
+// -----------------------------------------------------------------------------
+.incompany {
+  &__header {
+    @include rem(margin-bottom, 85px);
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      height: 314px;
+      background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjYyNHB4IiBoZWlnaHQ9IjMxNHB4IiB2aWV3Qm94PSIwIDAgMjYyNCAzMTQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUwLjIgKDU1MDQ3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5QYXRoLTI8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iaGVhZGVyIiBmaWxsPSIjRkZGRkZGIiBmaWxsLXJ1bGU9Im5vbnplcm8iPgogICAgICAgICAgICA8cGF0aCBkPSJNMCwwLjUgTDEyOTQsMzEwLjUgQzEyOTgsMzExLjUgMTMwNC42NjY2NywzMTIgMTMxMCwzMTIgQzEzMTUuMzMzMzMsMzEyIDEzMjUuNSwzMTEgMTMyOSwzMTAgTDI2MjQsMCBMMjYyNCwzMTQgTDAsMzE0IEwwLDAuNSBaIiBpZD0iUGF0aC0yIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=') center bottom no-repeat;
+    }
+    &__inner {
+      @include rem(padding-top, 52px);
+      position: relative;
+      min-height: 440px;
+      background: $blue-200 url('../images/bg-incompany-sm.jpg') center top no-repeat;
+      background-size: cover;
+      color: $white;
+      text-align: center;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -37px;
+        left: calc(50% - (37px / 2));
+        z-index: 10;
+        width: 44px;
+        height: 44px;
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: $white;
+        transform: rotate(45deg);
+      }
+    }
+    &__intro {
+      position: relative;
+      z-index: 5;
+      max-width: 80%;
+      margin-right: auto;
+      margin-left: auto;
+      .btn {
+        @include rem(margin-top, 22px);
+      }
+    }
+    &__logo {
+      @include rem(margin-bottom, 8px);
+      display: inline-block;
+    }
+  }
+
+  &__heading {
+    @include rem(font-size, 24px);
+    @include underline-heading($white);
+  }
+
+
+  // @media Tablet to up
+  @include media-breakpoint-up(md) {
+    &__header {
+      &__inner {
+        @include rem(padding-top, 80px);
+        background-image: url('../images/bg-incompany-lg.jpg');
+      }
+    }
+    &__intro {
+      max-width: auto;
+    }
+    &__heading {
+      @include rem(font-size, 36px);
+    }
+  }
+}
+
+
+
+.incompany__page {
+
+  // CB Numbers
+  // -----------------------------------------------------------------------------
+  .list-group {
+    [class*="site-heading"] {
+      color: $body-color;
+    }
+  }
+  .list-group__heading--sm {
+    color: $blue-300;
+  }
+
+  // @media only Tablet
+  @include media-breakpoint-only(md) {
+    .list-group {
+      display: block;
+      &__item {
+        @include rem(margin-bottom, 40px);
+        max-width: none;
+        padding: 0;
+      }
+    }
+  }
+
+
+  // CB Numbers
+  // -----------------------------------------------------------------------------
+  .cb-numbers {
+    background-image: url('../images/bg-numbers-incompany-sm.jpg');
+    &__logo {
+      &::before {
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTcxcHgiIGhlaWdodD0iNzdweCIgdmlld0JveD0iMCAwIDE3MSA3NyIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNTAuMiAoNTUwNDcpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPkNvbWJpbmVkLVNoYXBlPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IjA2LUVtcHJlc2FzIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iMDYtVC1FbXByZXNhcyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQyOC4wMDAwMDAsIC0xNDE3LjAwMDAwMCkiIGZpbGw9IiNEQkU2RUMiIGZpbGwtcnVsZT0ibm9uemVybyI+CiAgICAgICAgICAgIDxnIGlkPSJzZW1pb3ZhbCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDI4LjAwMDAwMCwgMTQxNy4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xNDcuNzk0NTMsNzUuOTg2ODUgQzE0MS4wNzUyNSw0Ny45MTA1MjkgMTE1LjI4NzI3LDI3IDg0LjUsMjcgQzUzLjU4MDcyLDI3IDI3LjcwMzY5LDQ4LjA5MDIzNiAyMS4xMjAwOSw3Ni4zNDg0MDYgTDAuMDc1OTEsNzEuNTYwODA1IEM3LjE5NjAxLDMwLjkwMzk5NCA0Mi43NTE5MiwwIDg1LjU0MjgsMCBDMTI4LjA2MzUxLDAgMTYzLjQ0MDMzLDMwLjUxNTAwMiAxNzAuODcxNDQsNzAuNzkxOTE3IEwxNDcuNzk0NTMsNzUuOTg2ODUgWiIgaWQ9IkNvbWJpbmVkLVNoYXBlIj48L3BhdGg+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==');
+      }
+      &::after {
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTM5cHgiIGhlaWdodD0iMTM5cHgiIHZpZXdCb3g9IjAgMCAxMzkgMTM5IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA1MC4yICg1NTA0NykgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+T3ZhbCA1PC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IHgxPSI0NC41NzkzMTY2JSIgeTE9IjQ2LjU1MzQ5ODElIiB4Mj0iOTMuMjYyNTMzJSIgeTI9IjY3LjE2MTA4NyUiIGlkPSJsaW5lYXJHcmFkaWVudC0xIj4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0JBQ0NFRiIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjOTc5Nzk3IiBzdG9wLW9wYWNpdHk9IjAiIG9mZnNldD0iMTAwJSI+PC9zdG9wPgogICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBvcGFjaXR5PSIwLjU3NzQ1NTM1NyI+CiAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbC01IiBzdHJva2U9InVybCgjbGluZWFyR3JhZGllbnQtMSkiIHN0cm9rZS13aWR0aD0iMyIgY3g9IjY5LjUiIGN5PSI2OS41IiByPSI2Ny41Ij48L2NpcmNsZT4KICAgIDwvZz4KPC9zdmc+');
+      }
+    }
+  }
+
+
+  // @media Tablet to up
+  @include media-breakpoint-up(md) {
+    .cb-numbers {
+      background-image: url('../images/bg-numbers-incompany-lg.jpg');
+      background-size: cover;
+    }
+  }
+
+
+  // CB Numbers
+  // -----------------------------------------------------------------------------
+  .testimonial {
+    &__heading {
+      color: $blue-300;
+    }
+    &__icon {
+      background-image: url('../images/icons/graduation-hat-color-alt.svg');
+    }
+  }
+
+
+  // CB Numbers
+  // -----------------------------------------------------------------------------
+  .working-in__list {
+    @include rem(margin-bottom, 60px);
+  }
+
+  // Slider
+  // -----------------------------------------------------------------------------
+  .slider {
+    &__name {
+      color: $blue-300;
+    }
+  }
+
+
+  // Fee training
+  // -----------------------------------------------------------------------------
+  .fee-training {
+    @include asparagus(35%);
+    margin-bottom: 0;
+    padding-right: 0;
+    &__heading {
+      color: $blue-300;
+    }
+
+    img {
+      @include rem(margin-top, 20px);
+    }
+    &__inner {
+      text-align: center;
+
+      // @media Tablet to up
+      @include media-breakpoint-up(md) {
+        max-width: span(10);
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      // @media Desktop to up
+      @include media-breakpoint-up(lg) {
+        max-width: span(6);
+      }
+    }
+  }
+}

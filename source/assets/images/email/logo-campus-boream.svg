@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="157" height="57" viewBox="0 0 157 57">
+  <defs>
+    <linearGradient id="logo-campus-boream-a" x1="33.866%" x2="40.637%" y1="78.857%" y2="37.925%">
+      <stop offset="0%" stop-color="#FFF"/>
+      <stop offset="100%" stop-color="#56C445"/>
+    </linearGradient>
+    <linearGradient id="logo-campus-boream-b" x1="45.659%" x2="62.282%" y1="86.549%" y2="11.015%">
+      <stop offset="0%" stop-color="#FFF"/>
+      <stop offset="100%" stop-color="#B11FDD"/>
+    </linearGradient>
+    <linearGradient id="logo-campus-boream-c" x1="11.375%" x2="129.121%" y1="65.824%" y2="-16.375%">
+      <stop offset="0%" stop-color="#FFF"/>
+      <stop offset="100%" stop-color="#05FFBA"/>
+    </linearGradient>
+    <radialGradient id="logo-campus-boream-d" cx="40.712%" cy="52.343%" r="38.676%" fx="40.712%" fy="52.343%">
+      <stop offset="0%" stop-color="#131313"/>
+      <stop offset="55.979%"/>
+      <stop offset="100%" stop-color="#FFF"/>
+    </radialGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(-3)">
+    <ellipse cx="27.524" cy="28.441" fill="url(#logo-campus-boream-a)" rx="31.224" ry="18.39" transform="rotate(-89 27.524 28.44)"/>
+    <ellipse cx="30.827" cy="31.644" fill="url(#logo-campus-boream-b)" rx="25.166" ry="18.39" transform="rotate(-50 30.827 31.644)" style="mix-blend-mode:multiply"/>
+    <ellipse cx="27.295" cy="35.508" fill="url(#logo-campus-boream-c)" rx="25.166" ry="18.39" transform="rotate(-177 27.295 35.508)" style="mix-blend-mode:multiply"/>
+    <circle cx="33.12" cy="33.36" r="23.28" fill="url(#logo-campus-boream-d)" opacity=".344" style="mix-blend-mode:multiply"/>
+    <circle cx="30.84" cy="30.84" r="20.04" fill="#FFF"/>
+    <text fill="#404644" font-family=".SFNSDisplay, .SF NS Display" font-size="21.6">
+      <tspan x="24.72" y="43.56">campus</tspan> <tspan x="99.118" y="43.56" letter-spacing=".312">b</tspan> <tspan x="111.748" y="43.56">oream</tspan>
+    </text>
+  </g>
+</svg>

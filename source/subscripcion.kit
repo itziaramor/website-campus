@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <!-- $pageTitle: Suscríbete. Campus Boream. -->
+  <!-- @import "_inc/head.kit" -->
+
+  <body class="subscription__page">
+    <!-- @import "_inc/google-tag-manager-noscript.html" -->
+
+    <header>
+      <!-- @import "_inc/navbar-inner.html" -->
+    </header>
+
+    <main>
+      <section class="subscription__form__input">
+        <div class="subscription__header__inner">
+          <i class=" icon-bg"></i>
+          <h1 class="subscription__heading"></h1>
+          <h2 class="subscription__subheading">¿Hablamos?</h2>
+          <p class="subscription__text">
+            Rellena el siguiente formulario con tus datos de contacto y
+            <span>nos pondremos en contacto contigo:</span>
+          </p>
+        </div>
+        <div class="subscription__form__wrapper">
+          <div class="container">
+            <form
+              id="subscription"
+              action="/form/subscription"
+              method="POST"
+              novalidate
+            >
+              <input type="hidden" name="landing" id="landing" value="" />
+              <input type="hidden" name="title" id="title" value="" />
+              <input type="hidden" name="year" id="year" value="" />
+              <input type="hidden" name="hrefFaqs" id="hrefFaqs" value="" />
+              <input type="hidden" name="icon" id="icon" value="" />
+              <div class="form-group form-group--flex">
+                <label for="cboConvocatoria">Selecciona convocatoria *</label>
+                <div class="form-control form-control--select">
+                  <select id="cboConvocatoria" name="date" required> </select>
+                  <div class="error-message">Campo obligatorio.</div>
+                </div>
+              </div>
+              <div class="form-group form-group--flex">
+                <label for="txtNombres">Nombre y apellidos *</label>
+                <div class="form-control">
+                  <input id="txtNombres" type="text" name="name" required />
+                  <div class="error-message">Campo obligatorio.</div>
+                </div>
+              </div>
+              <div class="form-group form-group--flex">
+                <label for="txtEmail">E-mail *</label>
+                <div class="form-control">
+                  <input
+                    id="txtEmail"
+                    type="email"
+                    name="email"
+                    class="form-control"
+                    required
+                  />
+                  <div class="error-message">Campo obligatorio.</div>
+                </div>
+              </div>
+              <div class="form-group form-group--flex">
+                <label for="txtTelefono">Teléfono *</label>
+                <div class="form-control">
+                  <input
+                    id="txtTelefono"
+                    type="text"
+                    name="phone"
+                    class="form-control"
+                    required
+                  />
+                  <div class="error-message">Campo obligatorio.</div>
+                </div>
+              </div>
+              <div class="form-group form-group--flex">
+                <label for="cboComo">¿Cómo nos has conocido?</label>
+                <div class="form-control form-control--select">
+                  <select id="cboComo" name="know" required>
+                    <option selected="selected">Selecciona una&hellip;</option>
+                    <option value="Google">Google</option>
+                    <option value="Twitter">Twitter</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="LinkedIn">LinkedIn</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="Switchup">Switchup</option>
+                    <option value="Me lo contó un amigo o familiar"
+                      >Me lo contó un amigo o familiar</option
+                    >
+                    <option value="Antiguo alumno de campus boream"
+                      >Antiguo alumno de campus boream</option
+                    >
+                    <option value="Evento o Meetup">Evento o Meetup</option>
+                    <option value="Otro">Otro</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group form-group--flex">
+                <label for="txtComentarios" class="label-textarea"
+                  >¿Quieres decirnos algo?</label
+                >
+                <div class="form-control">
+                  <textarea
+                    id="txtComentarios"
+                    name="comments"
+                    cols="60"
+                    rows="5"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="subscription__form__legal">
+                <div class="form-group">
+                  <div class="form-check">
+                    <input
+                      id="chkLegal"
+                      type="checkbox"
+                      name="legal"
+                      value="true"
+                      required
+                    />
+                    <label for="chkLegal"
+                      >Acepto las
+                      <a href="condiciones-contratacion.html" target="_blank"
+                        >condiciones</a
+                      >
+                      y la
+                      <a
+                        id="legalDocument"
+                        href="politica-privacidad.html"
+                        target="_blank"
+                        >política de privacidad</a
+                      ></label
+                    >
+                  </div>
+                  <div class="error-message">Campo obligatorio.</div>
+                </div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input
+                      id="chkSuscribirse"
+                      type="checkbox"
+                      value="true"
+                      name="subscribe"
+                    />
+                    <label for="chkSuscribirse"
+                      >Quiero estar informado de las novedades y los cursos que
+                      realizáis. Tranquilo, no madamos spam ;)</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="contact__form__legal">
+                <div class="form-group">
+                  <div
+                    id="recaptcha"
+                    class="g-recaptcha"
+                    data-sitekey="6Lc1SRQUAAAAAPNxU9m38KLro5LctXYgSemhH_XD"
+                  ></div>
+                  <div class="error-message">Recaptcha obligatorio.</div>
+                </div>
+              </div>
+              <div class="form-btn">
+                <button class="btn btn--secondary btn--lg">
+                  <span class="btn__text">Solicitar información</span>
+
+                  <span class="spinner">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- //subscription__form__wrapper-->
+      </section>
+
+      <section class="subscription__form__response" style="display: none">
+        <h2 class="subscription__text_response">Genial ;)</h2>
+        <p id="subscription__message">Has solicitado información sobre:</p>
+
+        <div class="subscription__header__inner">
+          <i class="icon-bg"></i>
+          <h1 class="subscription__heading"></h1>
+        </div>
+
+        <div class="subscription__contact">
+          <div class="container">
+            <p>
+              Nos pondremos en contacto contigo en breve.<br />
+              Si tienes cualquier duda mientras tanto puedes localizarnos en
+              <a href="mailto:campus@boream.com">campus@boream.com</a> o en el
+              teléfono <a href="tel:911841934">911 841 934</a>
+            </p>
+          </div>
+        </div>
+
+        <button class="btn btn--secondary btn--lg" id="close">Volver</button>
+      </section>
+      <!-- //subscription__form__response-->
+    </main>
+
+    <!-- @import "_inc/javascript.html" -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script type="text/javascript" src="assets/js/database-min.js"></script>
+    <script type="text/javascript" src="assets/js/subscripcion-min.js"></script>
+  </body>
+</html>

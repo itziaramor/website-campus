@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="89.7732927%" y1="0%" x2="44.5515281%" y2="76.8765155%" id="linearGradient-1">
+            <stop stop-color="#105580" offset="0%"></stop>
+            <stop stop-color="#38D0D4" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="01-Ficha-bootcamp" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-T-Ficha-Bootcamp-Scroll-Navegación" transform="translate(-717.000000, -40.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <path d="M727.253378,48.8391642 L735.799649,40.2928932 C736.190173,39.9023689 736.823338,39.9023689 737.213862,40.2928932 C737.604387,40.6834175 737.604387,41.3165825 737.213862,41.7071068 L728.667591,50.2533778 L737.213862,58.7996487 C737.604387,59.190173 737.604387,59.823338 737.213862,60.2138623 C736.823338,60.6043866 736.190173,60.6043866 735.799649,60.2138623 L727.253378,51.6675913 L718.707107,60.2138623 C718.316582,60.6043866 717.683418,60.6043866 717.292893,60.2138623 C716.902369,59.823338 716.902369,59.190173 717.292893,58.7996487 L725.839164,50.2533778 L717.292893,41.7071068 C716.902369,41.3165825 716.902369,40.6834175 717.292893,40.2928932 C717.683418,39.9023689 718.316582,39.9023689 718.707107,40.2928932 L727.253378,48.8391642 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

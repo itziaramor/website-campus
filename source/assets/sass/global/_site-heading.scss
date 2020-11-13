@@ -1,0 +1,111 @@
+// -----------------------------------------------------------------------------
+// HEADING OF SITE
+// -----------------------------------------------------------------------------
+
+
+.site-heading {
+
+  &__decoration {
+    @include rem(margin-bottom, 88px); 
+    position: relative;
+    // display: flex;
+    // justify-content: flex-end;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+    }
+    &::before {
+      top: calc(100% + 8px);
+      right: 50%;
+      left: 0;
+      border-bottom: 1px solid $green-200;
+    }
+    &::after {
+      top: 7px;
+      right: -61px;
+      @include rem(right, -122px);
+      left: 0;
+      margin: auto;
+      //right: -93px;
+      z-index: 2;
+      width: 128px;
+      height: 105px;
+      background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iOTJweCIgaGVpZ2h0PSI4NHB4IiB2aWV3Qm94PSIwIDAgOTIgODQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUxLjMgKDU3NTQ0KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5Hcm91cCA1MzwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSIwMS1GaWNoYS1ib290Y2FtcCIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgb3BhY2l0eT0iMC42NjUxMjI3NjgiPgogICAgICAgIDxnIGlkPSIwMS1FLUZpY2hhLUJvb3RjYW1wIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjg3LjAwMDAwMCwgLTI2ODIuMDAwMDAwKSI+CiAgICAgICAgICAgIDxnIGlkPSJNw7NkdWxvLTQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC02LjAwMDAwMCwgMjY2MC4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxnIGlkPSJHcm91cC01MCI+CiAgICAgICAgICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwLTgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDY3Ny4wMDAwMDAsIDcuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxnIGlkPSJHcm91cC00IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2My43MTcyNjAsIDUyLjMyNzEyNSkgcm90YXRlKC0yMy4wMDAwMDApIHRyYW5zbGF0ZSgtNjMuNzE3MjYwLCAtNTIuMzI3MTI1KSB0cmFuc2xhdGUoOC43MTcyNjAsIDE4LjgyNzEyNSkiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwLTUzIiBvcGFjaXR5PSIwLjU5NDA4NDgyMSI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTE5Ljg2NjIwNTEsOS4yODg2OTk2NSBMNzAuMDM0NTkxNCw5LjQyMTIyMzYyIEM3OS41OTMxNDUxLDkuNDQ0NjU5MjkgODQuMzcyNDIxOSwxMi4wMzAyMjU2IDg0LjM3MjQyMTksMTcuMTc3OTIyNiBDODQuMzcyNDIxOSwyMi4zMjU2MTk2IDc5LjU5MzE0NTEsMjQuODU1NTM0IDcwLjAzNDU5MTQsMjQuNzY3NjY2IEwxOS44NjYyMDUxLDI0LjYzNTE0MiBDMTEuMjY2NDIxOCwyNC40ODAxNTQ0IDYuOTY2NTMwMjEsMjEuOTIyNDE0IDYuOTY2NTMwMjEsMTYuOTYxOTIwOCBDNi45NjY1MzAyMSwxMi4wMDE0Mjc2IDExLjI2NjQyMTgsOS40NDM2ODcyNSAxOS44NjYyMDUxLDkuMjg4Njk5NjUgWiIgaWQ9IlJlY3RhbmdsZS05LUNvcHktMiIgZmlsbD0iIzEwNTU4MCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDUuNjY5NDc2LCAxNy4wMjkyODkpIHJvdGF0ZSgtMTMuNTAwMDAwKSB0cmFuc2xhdGUoLTQ1LjY2OTQ3NiwgLTE3LjAyOTI4OSkgIj48L3BhdGg+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTQzLjg2MjAzMTUsMTkuMzUxNDY1NiBMOTQuMDMwNDE3OSwxOS40ODM5ODk1IEMxMDMuNTg4OTcxLDE5LjUwNzQyNTIgMTA4LjM2ODI0OCwyMi4wOTI5OTE1IDEwOC4zNjgyNDgsMjcuMjQwNjg4NSBDMTA4LjM2ODI0OCwzMi4zODgzODU1IDEwMy41ODg5NzEsMzQuOTE4Mjk5OSA5NC4wMzA0MTc5LDM0LjgzMDQzMTkgTDQzLjg2MjAzMTUsMzQuNjk3OTA3OSBDMzUuMjYyMjQ4MywzNC41NDI5MjAzIDMwLjk2MjM1NjYsMzEuOTg1MTc5OSAzMC45NjIzNTY2LDI3LjAyNDY4NjcgQzMwLjk2MjM1NjYsMjIuMDY0MTkzNiAzNS4yNjIyNDgzLDE5LjUwNjQ1MzIgNDMuODYyMDMxNSwxOS4zNTE0NjU2IFoiIGlkPSJSZWN0YW5nbGUtOS1Db3B5LTIiIGZpbGw9IiM4QzQwQTMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDY5LjY2NTMwMiwgMjcuMDkyMDU1KSByb3RhdGUoLTEzLjUwMDAwMCkgdHJhbnNsYXRlKC02OS42NjUzMDIsIC0yNy4wOTIwNTUpICI+PC9wYXRoPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xNy4yODU2NDI3LDM5LjQ3NzAwNDggTDgxLjUwMTE3NzIsMzkuNjA5NTI4NyBDOTMuNzM2MTI1OSwzOS42MzI5NjQ0IDk5Ljg1MzYwMDIsNDIuMjE4NTMwNyA5OS44NTM2MDAyLDQ3LjM2NjIyNzcgQzk5Ljg1MzYwMDIsNTIuNTEzOTI0NyA5My43MzYxMjU5LDU1LjA0MzgzOTEgODEuNTAxMTc3Miw1NC45NTU5NzExIEwxNy4yODU2NDI3LDU0LjgyMzQ0NzEgQzYuMjc3OTIwMTMsNTQuNjY4NDU5NSAwLjc3NDA1ODg1Miw1Mi4xMTA3MTkxIDAuNzc0MDU4ODUyLDQ3LjE1MDIyNTkgQzAuNzc0MDU4ODUyLDQyLjE4OTczMjcgNi4yNzc5MjAxMywzOS42MzE5OTIzIDE3LjI4NTY0MjcsMzkuNDc3MDA0OCBaIiBpZD0iUmVjdGFuZ2xlLTktQ29weS0yIiBmaWxsPSIjOURFN0FDIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MC4zMTM4MzAsIDQ3LjIxNzU5NCkgcm90YXRlKC0xMy41MDAwMDApIHRyYW5zbGF0ZSgtNTAuMzEzODMwLCAtNDcuMjE3NTk0KSAiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+') no-repeat;
+    }
+    [class*="icon"] {
+      @include rem(width, 61px);
+      @include rem(height, 61px);
+      @include rem(font-size, 30px);
+      position: absolute;
+      top: -8px;
+      // right: 0;
+      @include rem(right, -61px);
+      left: 0;
+      margin: auto;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $green-200;
+      border-radius: 100px;
+      background-color: $white;
+      color: $green-200;
+    }
+  }
+  
+  &--h2 {
+    @include rem(font-size, 12px);
+    color: $green-200;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &--h3 {
+    @include rem(font-size, 24px);
+    @include rem(margin-bottom, 16px);
+    //@include rem(margin-bottom, 20px);
+    color: $purple-200;
+  }
+
+  &--h4 {
+    @include rem(margin-bottom, 18px);
+    @include rem(font-size, 24px);
+    color: $green-200;
+  }
+
+
+  // @media Tablet to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(md) {
+    &__decoration {
+      @include rem(margin-bottom, 128px); 
+      // max-width: span(6);
+      &::after {
+        @include rem(right, -61px);
+      }
+      [class*="icon"] {
+        right: 0;
+      }
+      .container {
+        padding-left: calc(((100% - 110px) / 12 * .5));
+      }
+    }
+    &--h2 {
+      font-weight: 400;
+    }
+    &--h3 {
+      font-size: $h1-font-size;
+    }
+  }
+
+
+  // @media Desktop to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(lg) {
+    &__decoration {
+      // padding-left: span(.5);
+    }
+  }
+}
+

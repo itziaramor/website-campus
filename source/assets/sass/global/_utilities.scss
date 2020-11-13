@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// UTILITIES
+// -----------------------------------------------------------------------------
+
+
+.sr-only { @include sr-only() }
+
+.hide { display: none !important }
+.show { display: block !important }
+
+
+// @media Smartphone to down
+// -----------------------------------------------------------------------------
+@include media-breakpoint-down(sm) {
+  .display--none--sm {
+    display: none !important;
+  }
+}
+
+
+// @media Tablet only
+// -----------------------------------------------------------------------------
+@include media-breakpoint-only(md) {
+  .display--none--md {
+    display: none !important;
+  }
+}

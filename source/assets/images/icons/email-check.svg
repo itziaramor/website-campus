@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="54px" viewBox="0 0 60 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>email-check</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="101.999998%" y2="100.999999%" id="linearGradient-1">
+            <stop stop-color="#3023AE" offset="0%"></stop>
+            <stop stop-color="#C86DD7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="04-E-Contacto-2" transform="translate(-693.000000, -354.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <g id="email-check" transform="translate(693.000000, 354.000000)">
+                <g id="Line_Icons">
+                    <g id="Group">
+                        <polygon id="Shape" points="43.6363636 20.0178 33.5263636 10.0089 37.3827273 6.1911 43.6363636 12.3822 55.3445455 0.7911 59.2009091 4.6089"></polygon>
+                        <path d="M38.1818182,21.6 L5.45454545,21.6 C2.44363636,21.6 0,24.0219 0,27 L0,48.6 C0,51.5781 2.44363636,54 5.45454545,54 L38.1818182,54 C41.1927273,54 43.6363636,51.5781 43.6363636,48.6 L43.6363636,27 C43.6363636,24.0219 41.1927273,21.6 38.1818182,21.6 Z M32.4,27 L21.8181818,34.4817 L11.2363636,27 L32.4,27 Z M5.45454545,48.6 L5.45454545,29.5461 L20.2336364,39.9951 C20.7081818,40.3326 21.2645455,40.5 21.8181818,40.5 C22.3718182,40.5 22.9281818,40.3299 23.4027273,39.9951 L38.1818182,29.5461 L38.1872727,48.6 L5.45454545,48.6 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

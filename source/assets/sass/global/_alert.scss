@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// ALERT
+// -----------------------------------------------------------------------------
+
+.alert {
+  @include rem(padding, 16px 30px);
+  @include rem(font-size, 14px);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: $zindex-alert;
+  background-color: $blue-300;
+  color: $white;
+  &--flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+}

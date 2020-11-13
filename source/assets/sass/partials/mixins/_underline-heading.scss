@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// UNDERLINE HEADER
+// -----------------------------------------------------------------------------
+
+@mixin underline-heading($color: $body-color, $align: auto) {
+  &::after {
+    content: "";
+    display: block;
+    width: 85px;
+    height: 1px;
+    margin: 25px $align;
+    background-color: $color;
+  }
+}

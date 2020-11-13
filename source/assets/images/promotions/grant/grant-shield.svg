@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="278px" height="138px" viewBox="0 0 278 138" style="enable-background:new 0 0 278 138;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.433;fill:#F1C3FF;stroke:#FFFFFF;enable-background:new    ;}
+	.st1{fill:url(#SVGID_1_);stroke:#FFFFFF;stroke-width:2;}
+	.st2{fill:#FFFFFF;}
+	.st3{font-family:'EncodeSans-Medium';}
+	.st4{font-size:20px;}
+	.st5{font-size:32px;}
+</style>
+<g>
+	<path class="st0" d="M277.5,3.5H0.5v86.1c0,6.6,4.5,12.4,10.9,14l127.6,33l127.6-33c6.4-1.7,10.9-7.4,10.9-14V3.5z"/>
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-229.9489" y1="3.8212" x2="-230.5952" y2="3.3779" gradientTransform="matrix(263 0 0 124.3207 60791 -370.0214)">
+		<stop  offset="0" style="stop-color:#D4A9DE"/>
+		<stop  offset="1" style="stop-color:#A656BE"/>
+	</linearGradient>
+	<path class="st1" d="M270,2H7v81.8c0,6.5,4.4,12.1,10.7,13.6l120.8,28.9l120.8-28.8c6.3-1.5,10.7-7.1,10.7-13.6V2z"/>
+	<text transform="matrix(1 0 0 1 62.105 56)" class="st2 st3 st4">Becas Bootcamp</text>
+	<text transform="matrix(1 0 0 1 104.5 99)" class="st2 st3 st5">2020</text>
+</g>
+</svg>

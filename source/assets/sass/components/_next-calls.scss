@@ -1,0 +1,195 @@
+// -----------------------------------------------------------------------------
+// NEXT CALLS
+// -----------------------------------------------------------------------------
+
+.next-calls {
+
+  $th-height: 72px !default;
+  $td-height: 86px !default;
+
+  @include rem(margin-bottom, 35px);
+
+  &__intro {
+    @include rem(margin-bottom, 50px);
+  }
+
+  
+
+  .table {
+    width: 100%;
+    th, td {
+      color: $emerald-200;
+      font-weight: 300;
+    }
+    td {
+      line-height: 1.4;
+      &[data-th="Total"] {
+        font-weight: 600;
+      }
+      &:last-child {
+        text-align: center;
+      }
+    }
+    .text--muted {
+      td {
+        color: $gray-400;
+        &:nth-child(4) {
+          font-weight: 300;
+        }
+        &:nth-child(5),
+        &:nth-child(6) {
+          text-transform: uppercase;
+        }
+      }
+    }
+    time,
+    .next-calls__message {
+      @include rem(font-size, 14px);
+      display: block;
+    }
+    sup {
+      font-weight: 300;
+    }
+  }
+
+  &__message {
+    @include rem(margin-top, 3px);
+    color: $green-200;
+  }
+
+  &__notes {
+    @include rem(padding, 20px 0);
+    @include rem(font-size, 12px);
+    border-bottom: 8px solid #e4f3f0;
+    color: $emerald-200;
+    font-weight: 300;
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .btn {
+    sup {
+      margin-left: 3px;
+    }
+  }
+
+
+  // @media Smartphone to down
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-down(sm) {
+    &__table__inner {
+      > .container {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+    .table {
+      thead {
+        display: none;
+      }
+      tbody td,
+      tbody td::before,
+      time {
+        display: flex;
+        align-items: center;
+      }
+      time {
+        justify-content: flex-end;
+      }
+      tbody td,
+      tbody td::before {
+        flex: 1 0 50%;
+        height: 85px;
+      }
+      tbody {
+        border-bottom: 8px solid #e4f3f0;
+        tr {
+          border-top: 8px solid #e4f3f0;
+        }
+        td {
+          border-bottom: 1px solid $gray-200;
+          padding-right: $grid-gutter-sm;
+          padding-left: $grid-gutter-sm;
+          text-align: right;
+          &:not(:last-child)::before {
+            content: attr(data-th);
+            float: left;
+            text-align: left;
+          }
+          &:last-child {
+            @include rem(font-size, 14px);
+            background-color: rgba($emerald-100, .05);
+            color: $emerald-200;
+            justify-content: flex-end;
+            > span {
+              display: flex;
+              align-items: center;
+              a {
+                order: 2;
+              }
+              .next-calls__message {
+                @include rem(margin, 0 20px 0 0);
+                order: 1
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  // @media Tablet to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(md) {
+    &__table {
+      background-image: repeating-linear-gradient(0, $gray-200, $gray-200 1px, $white 1px, $white 86px);
+    }
+    &__table__inner {
+      background: linear-gradient(to bottom, #e4f3f0 0%, #e4f3f0 72px, rgba(#e4f3f0, 0) 73px, rgba(#e4f3f0, 0) 100%);
+    }
+    &__intro {
+      max-width: span(8);
+    }
+    &__notes {
+      @include rem(font-size, 14px);
+    }
+    .table {
+      th {
+        @include rem(height, 72px);
+        &:last-child {
+          @include rem(width, 120px);
+        }
+      }
+      td {
+        @include rem(height, 86px);
+        @include rem(padding-right, 20px);
+      }    
+    }
+  }
+
+
+  // @media Desktop to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(lg) {
+    &__intro,
+    &__notes p {
+      padding-left: span(.5);
+    }
+    .table {
+      width: 73%;
+      margin-left: span(.5);
+      th:last-child {
+        width: auto;
+      }
+      td {
+        @include rem(padding-right, 30px);
+      }
+      &--full-width {
+        width: 90%;
+      }
+    }
+  }
+
+}

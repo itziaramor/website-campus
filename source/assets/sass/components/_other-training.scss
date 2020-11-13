@@ -1,0 +1,110 @@
+// -----------------------------------------------------------------------------
+// OTHER TRAINING
+// -----------------------------------------------------------------------------
+
+.other-training {
+  @include rem(margin-bottom, 65px);
+
+  &__heading {
+    @include rem(margin-bottom, 35px);
+    @include rem(font-size, 18px);
+    color: $purple-200;
+
+    &--sm {
+      // @include rem(min-height, 58px);
+      display: flex;
+      color: $green-200;
+      @include rem(margin-bottom, 14px);
+      [class*="icon"] {
+        @include rem(margin-top, 4px);
+        @include rem(margin-right, 5px);
+      }
+    }
+  }
+
+  &__time {
+    @include rem(margin-left, 10px);
+    @include rem(padding-left, 13px);
+    border-left: 1px solid $body-color;
+  }
+
+  .list-group {
+    text-align: left;
+    p {
+      @include rem(margin-bottom, 6px);
+    }
+  }
+
+
+  // @media Smartphone to down
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
+
+  // @media Tablet to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(md) {
+    @include rem(margin-bottom, 75px);
+    .list-group__item {
+      position: relative;
+      padding: 0;
+      // padding: 0 ($grid-gutter-md * 2) 10px 0;
+      &:last-child {
+        padding-right: 0;
+      }
+      &:nth-child(even)::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -37px;
+        border-left: 1px solid $gray-500;
+      }
+    }
+  }
+
+
+  // @media Desktop to up
+  // -----------------------------------------------------------------------------
+  @include media-breakpoint-up(lg) {
+    @include rem(margin-bottom, 135px);
+    // padding-left: span(.5);
+    .container {
+      padding-left: span(.5);
+    }
+
+    .list-group {
+      padding: 0;
+      text-align: left;
+
+      &__item {
+        &::before {
+          display: none;
+        }
+        &:not(:first-child) {
+          @include rem(padding-left, 20px);
+          border-left: 1px solid $gray-500;
+        }
+      }
+    }
+
+    &__heading {
+      &--sm {
+        @include rem(min-height, 58px);
+      }
+    }
+
+  }
+
+  @include media-breakpoint-up(xl) {
+    &__heading {
+      &--sm {
+        @include rem(font-size, 22px);
+        min-height: auto;
+      }
+    }
+  }
+
+}

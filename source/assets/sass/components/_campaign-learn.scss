@@ -1,0 +1,113 @@
+// -----------------------------------------------------------------------------
+// CAMPAIGN: LEARN
+// -----------------------------------------------------------------------------
+
+
+.campaign-learn {
+  padding: rem(115px) 0 rem(54px);
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  
+  &__description {
+    text-align: left;
+    
+    @include media-breakpoint-up(lg) {
+      max-width: span(6.5);
+    }
+    @include media-breakpoint-up(xl) {
+      max-width: span(7.5);
+    }
+  }
+
+  &__logo {
+    margin-bottom: rem(47px);
+    line-height: rem(28px);
+    color: $blue-300;
+    display: flex;
+    align-items: flex-start;
+
+    img {
+      max-width: rem(28px);
+      margin-right: rem(8px);
+    }
+
+    &-text {
+      font-family: $font-family-base;
+      font-size: rem(25px);
+      font-weight: $font-weight-base;
+
+      span {
+        display: block;
+        font-size: rem(13px);
+        text-transform: uppercase;
+      }
+    }
+  }
+  
+  &__title {
+    margin-bottom: rem(18px);
+    font-family: $font-family-base;
+    font-size: rem(24px);
+    font-weight: $font-weight-base;
+    line-height: rem(32px);
+    color: $blue-300;
+  }
+  
+  &__text {
+    font-family: $font-family-base;
+    font-size: rem(16px);
+    font-weight: $font-weight-extralight;
+    line-height: rem(29px);
+  }
+  
+  &__list {
+    margin-top: rem(60px);
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    
+    &-item {
+      margin-bottom: rem(41px);
+      flex: 0 1 100%;
+
+      @include media-breakpoint-up(md) {
+        flex: 0 1 calc(50% - 40px);
+
+        &:nth-child(odd) {
+          margin-right: rem(40px);
+        }
+      }
+      @include media-breakpoint-up(lg) {
+        flex: 0 1 50%;
+
+        &:nth-child(odd) {
+          margin-right: 0;
+        }
+      }
+    } 
+    
+    h3 {
+      margin-bottom: rem(9px);
+      font-family: $font-family-base;
+      font-size: rem(16px);
+      font-weight: $font-weight-extralight;
+      line-height: rem(29px);
+      text-transform: uppercase;
+    }
+  }
+  
+  &__sublist {
+    padding-left: rem(16px);
+    list-style-type: disc;
+    &-item {
+      font-family: $font-family-base;
+      font-size: rem(16px);
+      font-weight: $font-weight-extralight;
+      line-height: rem(29px);
+    }
+  }
+  
+}
+

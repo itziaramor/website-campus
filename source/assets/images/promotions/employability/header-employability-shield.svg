@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="278px" height="140px" viewBox="0 0 278 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.1 (89650) - https://sketch.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="109.393536%" y1="50.7571035%" x2="44.7635361%" y2="49.3350636%" id="linearGradient-1">
+            <stop stop-color="#6FBAAA" offset="0%"/>
+            <stop stop-color="#579487" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-20-Copy" transform="translate(0.000000, -16.000000)">
+            <g id="header-employability-shield" fill-rule="nonzero" stroke="#FFFFFF">
+                <path d="M278,0.28 L1,2 L0.5,92.61 C0.5,99.22 4.97,104.99 11.37,106.65 L139,139.65 L266.62,106.7 C273.02,105.05 277.5,99.27 277.5,92.66 L278,0.28 Z" id="Path" fill="#6FBAAA" opacity="0.433"/>
+                <path d="M270,10 L7,10 L7,86.81 C7,93.29 11.44,98.92 17.74,100.43 L138.5,129.31 L259.25,100.48 C265.55,98.97 270,93.34 270,86.86 L270,10 Z" id="Path" stroke-width="2" fill="url(#linearGradient-1)"/>
+            </g>
+            <text id="TODOS-NUESTROS-ALUMN" font-family="EncodeSans-SemiBold, Encode Sans SemiBold" font-size="12" font-weight="500" line-spacing="15" fill="#FFFFFF">
+                <tspan x="21.975" y="75">TODOS NUESTROS ALUMNOS TRABAJAN </tspan>
+                <tspan x="64.98" y="90">COMO PROGRAMADORES</tspan>
+            </text>
+            <text id="Empleabilidad-100%" font-family="EncodeSans-Medium, Encode Sans Medium" font-size="20" font-weight="normal" line-spacing="32" fill="#FFFFFF">
+                <tspan x="47.47" y="51">Empleabilidad 100%</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

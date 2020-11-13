@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <!-- $pageTitle: Contacta con nosotros. Campus Boream. -->
+  <!-- @import "_inc/head.kit" -->
+
+  <body class="contact__page">
+    <!-- @import "_inc/google-tag-manager-noscript.html" -->
+
+    <header>
+      <!-- $navContactaCurrent: current -->
+      <!-- @import "_inc/navbar.kit" -->
+
+      <div class="container">
+        <div class="contact-header__inner">
+          <h1 class="contact-header__heading">Contacta con nosotros</h1>
+        </div>
+        <!-- //.header__inner -->
+      </div>
+      <!-- //.container -->
+    </header>
+
+    <main>
+      <div class="contact__form__wrapper">
+        <div class="container">
+          <form id="contact" action="/form/contact" method="POST" novalidate>
+            <div class="form-group form-group--flex">
+              <label for="txtNombres">Nombre y apellidos *</label>
+              <div class="form-control">
+                <input id="txtNombres" type="text" name="name" required />
+                <div class="error-message">Campo obligatorio.</div>
+              </div>
+            </div>
+            <div class="form-group form-group--flex">
+              <label for="txtEmail">E-mail *</label>
+              <div class="form-control">
+                <input
+                  id="txtEmail"
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  required
+                />
+                <div class="error-message">Campo obligatorio.</div>
+              </div>
+            </div>
+            <div class="form-group form-group--flex">
+              <label for="txtTelefono">Teléfono *</label>
+              <div class="form-control">
+                <input
+                  id="txtTelefono"
+                  type="text"
+                  name="phone"
+                  class="form-control"
+                  required
+                />
+                <div class="error-message">Campo obligatorio.</div>
+              </div>
+            </div>
+            <div class="form-group form-group--flex">
+              <label for="txtComentarios" class="label-textarea">Mensaje</label>
+              <div class="form-control">
+                <textarea
+                  id="txtComentarios"
+                  name="comments"
+                  cols="60"
+                  rows="5"
+                ></textarea>
+              </div>
+            </div>
+            <div class="contact__form__legal">
+              <div class="form-group">
+                <div class="form-check">
+                  <input
+                    id="chkLegal"
+                    type="checkbox"
+                    value="true"
+                    name="legal"
+                    required
+                  />
+                  <label for="chkLegal"
+                    >Acepto la
+                    <a href="politica-privacidad.html" target="_blank"
+                      >política de privacidad</a
+                    ></label
+                  >
+                </div>
+                <div class="error-message">Campo obligatorio.</div>
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <input
+                    id="chkSuscribirse"
+                    type="checkbox"
+                    value="true"
+                    name="subscribe"
+                  />
+                  <label for="chkSuscribirse"
+                    >Quiero estar informado de las novedades y los cursos que
+                    realizáis. Tranquilo, no madamos spam ;)</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="contact__form__legal">
+              <div class="form-group">
+                <div
+                  id="recaptcha"
+                  class="g-recaptcha"
+                  data-sitekey="6Lc1SRQUAAAAAPNxU9m38KLro5LctXYgSemhH_XD"
+                ></div>
+                <div class="error-message">Recaptcha obligatorio.</div>
+              </div>
+            </div>
+
+            <div class="form-btn">
+              <button class="btn btn--secondary btn--lg">
+                <span class="btn__text">Enviar</span>
+
+                <span class="spinner">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--// contact__form__wrapper-->
+
+      <div class="contact__form__response" style="display: none">
+        <div class="container">
+          <img src="assets/images/icons/email-check.svg" />
+          <p class="contact__text__response">
+            Gracias por contactar con nosotros!<br />Te responderemos en breve.
+          </p>
+        </div>
+      </div>
+      <!--// contact__form__response-->
+
+      <div class="contact__map__wrapper">
+        <div class="contact__map__decoration">
+          <img
+            class="contact__map__icon"
+            src="assets/images/logos/cb-white.svg"
+            width="54"
+            height="65"
+            alt="Campus Boream"
+          />
+        </div>
+        <div id="map" class="contact__map"></div>
+      </div>
+      <!--// contact__map__wrapper-->
+
+      <div class="contact__info__wrapper">
+        <div class="container">
+          <ul class="contact__info">
+            <li>
+              <i class="icon-phone-office" aria-hidden="true"></i>
+              <p class="contact__text">
+                <small>Llámanos al</small>+34 911 841 934
+              </p>
+            </li>
+            <li class="contact__info__location">
+              <a class="location__link" href="https://goo.gl/maps/c7F6hJqkwDR2">
+                <p class="location__link__literal">
+                  Ver ubicación<br />en Google Maps
+                </p>
+                <img
+                  class="location__link__icon"
+                  src="assets/images/logos/google-maps.png"
+                />
+              </a>
+              <i class="icon-map-marker" aria-hidden="true"></i>
+              <p class="contact__text">
+                Calle Teniente Coronel Noreña, 11<br />28045 - Madrid
+              </p>
+            </li>
+            <li>
+              <i class="icon-envelope" aria-hidden="true"></i>
+              <p class="contact__text">
+                <small>Escríbenos a</small>campus@boream.com
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--// contact__info__wrapper-->
+    </main>
+
+    <!-- @import "_inc/footer.html" -->
+    <!-- @import "_inc/javascript.html" -->
+    <!-- @import "_inc/javascript-contacta.html" -->
+  </body>
+</html>

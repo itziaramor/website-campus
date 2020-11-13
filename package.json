@@ -1,0 +1,22 @@
+{
+  "name": "campus-boream",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "rrequero",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "google-recaptcha": "^1.1.0",
+    "koa": "^2.5.2",
+    "koa-body": "^4.0.4",
+    "koa-cors": "0.0.16",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "nodemailer": "^4.6.8"
+  }
+}

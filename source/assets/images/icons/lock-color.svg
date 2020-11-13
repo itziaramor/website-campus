@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="34px" viewBox="0 0 24 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>lock-color</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="101.999998%" y2="100.999999%" id="linearGradient-1">
+            <stop stop-color="#3023AE" offset="0%"></stop>
+            <stop stop-color="#C86DD7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="05-Legal" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="05-E-Legal-Iconos" transform="translate(-708.000000, -835.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <g id="Group-4" transform="translate(708.000000, 835.000000)">
+                <path d="M12,27.2 C13.4201608,27.2 14.5714286,26.0583261 14.5714286,24.65 C14.5714286,23.2416739 13.4201608,22.1 12,22.1 C10.5798392,22.1 9.42857143,23.2416739 9.42857143,24.65 C9.42857143,26.0583261 10.5798392,27.2 12,27.2 Z M20.5714286,15.3 L20.5714286,8.5 C20.5714286,3.8131 16.7262857,0 12,0 C7.27371429,0 3.42857143,3.8131 3.42857143,8.5 L3.42857143,15.3 C1.536,15.3 0,16.8232 0,18.7 L0,30.6 C0,32.4751 1.536,34 3.42857143,34 L20.5714286,34 C22.464,34 24,32.4751 24,30.6 L24,18.7 C24,16.8232 22.464,15.3 20.5714286,15.3 Z M6.85714286,8.5 C6.85714286,5.6882 9.16457143,3.4 12,3.4 C14.8354286,3.4 17.1428571,5.6882 17.1428571,8.5 L17.1428571,15.3 L6.85714286,15.3 L6.85714286,8.5 Z M3.42857143,30.6 L3.42857143,18.7 L20.5714286,18.7 L20.5748571,30.6 L3.42857143,30.6 Z" id="lock-color"></path>
+            </g>
+        </g>
+    </g>
+</svg>

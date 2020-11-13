@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Artboard Copy 3</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard-Copy-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-9">
+            <g id="Line_Icons" transform="translate(5.000000, 4.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                <g id="Group">
+                    <path d="M8,18 L2,18 L2,8 L20,8 L20,5 C20,3.898 19.103,3 18,3 L17,3 L17,0 L15,0 L15,5 L14,5 L14,3 L7,3 L7,0 L5,0 L5,5 L4,5 L4,3 L2,3 C0.897,3 0,3.897 0,5 L0,18 C0,19.103 0.897,20 2,20 L8,20 L8,18 Z" id="Shape"></path>
+                    <g transform="translate(10.000000, 10.000000)" id="Shape">
+                        <path d="M7,14 C3.14,14 0,10.86 0,7 C0,3.14 3.14,0 7,0 C10.86,0 14,3.14 14,7 C14,10.86 10.86,14 7,14 Z M7,2 C4.243,2 2,4.243 2,7 C2,9.757 4.243,12 7,12 C9.757,12 12,9.757 12,7 C12,4.243 9.757,2 7,2 Z"></path>
+                        <polygon points="10 8 6 8 6 3 8 3 8 6 10 6"></polygon>
+                    </g>
+                </g>
+            </g>
+            <rect id="Rectangle-path" x="0" y="0" width="32" height="32"></rect>
+        </g>
+    </g>
+</svg>
